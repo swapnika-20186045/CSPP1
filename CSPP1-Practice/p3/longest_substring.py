@@ -17,12 +17,12 @@ def main():
             f_cnt += 1
             fs = fs + s_1[i+1]
     else:
-        if f_cnt > f_max:
+        if f_cnt >= f_max:
             f_max = f_cnt
             s1 = fs
             f_cnt = 0
             fs = s_1[i+1]
-    if f_cnt > f_max:
+    if f_cnt >= f_max:
         s1 = fs
     print(s1)
 if __name__== "__main__":
