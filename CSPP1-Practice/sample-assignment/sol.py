@@ -4,9 +4,9 @@ Created on 2-8-2018
 '''
 
 def main():
-	'''
-	factorial
-	'''
+    '''
+    addition of two numbers
+    '''
     data = input()
     print(int(data[0])+int(data[3]))
 
