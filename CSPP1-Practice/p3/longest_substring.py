@@ -8,11 +8,11 @@ def main():
     st_r = input()
     s_1 = ''
     f_s = ''
-    n = len(st_r)
+    le_n = len(st_r)
     f_max = 0
     f_cnt = 0
     f_s = st_r[0]
-    for i in range(0, n-1):
+    for i in range(0, le_n-1):
         if ord(st_r[i]) <= ord(st_r[i+1]):
             f_cnt += 1
             f_s = f_s + st_r[i+1]
