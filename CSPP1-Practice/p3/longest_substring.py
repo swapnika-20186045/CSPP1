@@ -25,5 +25,5 @@ def main():
     if f_cnt > f_max:
         s_1 = f_s
     print(s_1)
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
