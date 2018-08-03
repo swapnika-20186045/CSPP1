@@ -12,9 +12,9 @@ def main():
     while ans ** 3 < int(nu_m):
         ans = ans + 1
     if ans ** 3 == int(nu_m):
-        print(str(nu_m) + 'is a perfect cube')
+        print(str(nu_m) + ' is a perfect cube')
     else:
-        print(str(nu_m) + 'is not a perfect cube')
+        print(str(nu_m) + ' is not a perfect cube')
 
 if __name__ == "__main__":
     main()
