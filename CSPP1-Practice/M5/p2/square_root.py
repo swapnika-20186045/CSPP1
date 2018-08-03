@@ -14,11 +14,11 @@ def main():
     while abs(guess**2 - int(sq_r)) >= epsilon:
         guess += increment
         num_guesses += 1
-    print('num_guesses=', num_guesses)
+    #print('num_guesses=', num_guesses)
     if abs(guess**2 - int(sq_r)) >= epsilon:
         print('Failed on square root of', sq_r)
     else:
-        print(guess, 'is close to the square root of', sq_r)
+        print(guess)
 
 if __name__ == "__main__":
     main()
