@@ -6,7 +6,7 @@ Created on 3-08-2018
 def main():
     '''Write a python program to find if the given number is a perfect cube or not
     using guess and check algorithm'''
-    print("enter an integer: ")
+    #print("enter an integer: ")
     nu_m = input()
     ans = 0
     while ans ** 3 < int(nu_m):
