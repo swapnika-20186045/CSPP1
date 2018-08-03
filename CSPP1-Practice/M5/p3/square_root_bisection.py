@@ -20,8 +20,9 @@ def main():
         else:
             hig_h = gu_ess
         gu_ess = (hig_h + lo_w)/2.0
-    print('num_guesses=', num_guesses)
-    print(gu_ess, 'is close to the square root of', sq_r)
+    # print('num_guesses=', num_guesses)
+    print(num_guesses)
+    # print(gu_ess, 'is close to the square root of', sq_r)
 
 if __name__ == "__main__":
     main()
