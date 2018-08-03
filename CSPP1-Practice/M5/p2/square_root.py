@@ -9,7 +9,7 @@ def main():
     sq_r = input()
     epsilon = 0.01
     guess = 0.0
-    increment = 0.0001
+    increment = 0.1
     num_guesses = 0
     while abs(guess**2 - int(sq_r)) >= epsilon:
         guess += increment
