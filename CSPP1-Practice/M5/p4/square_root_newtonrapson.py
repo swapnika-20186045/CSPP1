@@ -13,8 +13,9 @@ def main():
     while abs(guess*guess - int(sq_r)) >= epsilon:
         num_guesses += 1
         guess = guess -(((guess**2) - int(sq_r))/(2*guess))
-    print('num_guesses = '+" "  +str(num_guesses))
-    print('Square root of' + str(sq_r) + ' is about ' + str(guess))
+    # print('num_guesses = '+" "  +str(num_guesses))
+    # print('Square root of' + str(sq_r) + ' is about ' + str(guess))
+    print(guess)
 
 if __name__ == "__main__":
     main()
