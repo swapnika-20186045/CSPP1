@@ -11,15 +11,15 @@ def main():
     nu_m = int(input())
     pr_o = 1
     n_f = 1
-    if nu_m < 0:
-    	n_f = -1
-    	nu_m = -(nu_m)
-    elif nu_m > 1:
+    if nu_m = 0:
+        print(0)
+    elif nu_m < 0:
+        n_f = -1
+        nu_m = -(nu_m)
+    while nu_m > 1:
         re_s = nu_m%10
         pr_o = pr_o * re_s
         nu_m = nu_m // 10
-     else nu_m == 0:
-        print(0)
     print(pr_o*n_f)
 if __name__ == "__main__":
     main()
