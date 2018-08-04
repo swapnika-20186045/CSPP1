@@ -11,7 +11,9 @@ def main():
     nu_m = int(input())
     pr_o = 1
     n_f = 1
-    if nu_m <= 0:
+    if nu_m = 0:
+        print(0)
+    elif nu_m < 0:
     	n_f = -1
     	nu_m = -(nu_m)
     while nu_m > 1:
