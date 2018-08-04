@@ -15,8 +15,8 @@ def main():
         re_s = nu_m%10
         pr_o = pr_o * re_s
         nu_m = nu_m // 10
-    if nu_m < 0:
-    	pr_o = -(pr_o)
+        if nu_m < 0:
+            pr_o = -(pr_o)
     print(pr_o)
 if __name__ == "__main__":
     main()
