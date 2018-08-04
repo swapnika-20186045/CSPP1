@@ -13,8 +13,8 @@ def main():
     n_f = 1
     if nu_m == 0:
         print(0)
-        return 
-    elif nu_m < 0:
+        return
+    if nu_m < 0:
         n_f = -1
         nu_m = -(nu_m)
     while nu_m > 1:
