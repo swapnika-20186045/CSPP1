@@ -18,7 +18,7 @@ def main():
     tem_p = k
     while tem_p > 0:
         re_s = tem_p % 10
-        pr_o = pr_o * (re_s * c_nt)
+        pr_o = pr_o * (re_s)
         tem_p = tem_p // 10
     print(pr_o)
 if __name__ == "__main__":
