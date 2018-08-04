@@ -18,6 +18,6 @@ def main():
         re_s = nu_m%10
         pr_o = pr_o * re_s
         nu_m = nu_m // 10
-    print(pr_o)
+    print(pr_o*n_f)
 if __name__ == "__main__":
     main()
