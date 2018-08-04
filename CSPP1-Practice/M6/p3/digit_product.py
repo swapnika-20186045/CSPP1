@@ -11,7 +11,7 @@ def main():
     nu_m = int(input())
     pr_o = 1
     while nu_m > 0:
-    	re_s = nu_m%10
+        re_s = nu_m%10
         pr_o = pr_o * re_s
         nu_m = nu_m // 10
     print(pr_o)
