@@ -16,7 +16,7 @@ def main():
         c_nt += 1
         nu_m = nu_m // 10
     tem_p = k
-    while tem_p > 0:
+    while tem_p >= 0:
         re_s = tem_p % 10
         pr_o = pr_o * (re_s)
         tem_p = tem_p // 10
