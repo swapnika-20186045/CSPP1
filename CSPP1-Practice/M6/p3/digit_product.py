@@ -16,7 +16,7 @@ def main():
     elif nu_m < 0:
     	n_f = -1
     	nu_m = -(nu_m)
-    while nu_m > 1:
+    elif nu_m > 1:
         re_s = nu_m%10
         pr_o = pr_o * re_s
         nu_m = nu_m // 10
