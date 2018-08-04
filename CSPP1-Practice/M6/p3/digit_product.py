@@ -13,7 +13,7 @@ def main():
     c_nt = 0
     k = nu_m
     while nu_m != 0:
-        c_nt +=1
+        c_nt += 1
         nu_m = nu_m // 10
     tem_p = k
     while tem_p > 0:
