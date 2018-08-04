@@ -10,13 +10,14 @@ def main():
     '''
     nu_m = int(input())
     pr_o = 1
-    
-    while nu_m > 0:
+    n_f = 1
+    if nu_m < 0:
+    	n_f = -1
+    	nu_m = -(nu_m)
+    while nu_m > 1:
         re_s = nu_m%10
         pr_o = pr_o * re_s
         nu_m = nu_m // 10
-        if nu_m < 0:
-            pr_o = -(pr_o)
     print(pr_o)
 if __name__ == "__main__":
     main()
