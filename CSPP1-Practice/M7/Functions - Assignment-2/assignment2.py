@@ -31,7 +31,7 @@ payment scheme, which is okay. A summary of the required math is found below:
 Monthly interest rate = (Annual interest rate) / 12.0
 Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
 Updated balance each month = (Monthly unpaid balance)+
-                    (Monthly interest rate x Monthly unpaid balance)
+.                    (Monthly interest rate x Monthly unpaid balance)
 
 '''
 
@@ -50,7 +50,7 @@ def paying_debt_off_in_a_year(initial_balance, annual_interest_rate):
     Monthly interest rate = (Annual interest rate) / 12.0
     Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
     Updated balance each month = (Monthly unpaid balance) +
-                    (Monthly interest rate x Monthly unpaid balance)
+    .                (Monthly interest rate x Monthly unpaid balance)
 
     """
     mfp = 0
