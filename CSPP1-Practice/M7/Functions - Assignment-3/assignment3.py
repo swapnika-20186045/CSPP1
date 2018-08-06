@@ -52,6 +52,7 @@ def payingDebtOffInAYear(initial_balance, annual_interest_rate):
         # print(mfp)
         ubm = initial_balance
         mfp = (lower_bound+upper_bound)/2.0
+        # mfp = int(mfp*100)/100.0
         for _ in range(12):
             mub = ubm - mfp
             ubm = mub + mir*mub
