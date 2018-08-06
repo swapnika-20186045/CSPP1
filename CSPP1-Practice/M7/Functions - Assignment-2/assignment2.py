@@ -35,18 +35,18 @@ Updated balance each month = (Monthly unpaid balance)+
 
 '''
 
-def payingDebtOffInAYear(initial_balance, annual_interest_rate):
+def paying_Debt_Off_In_A_Year(initial_balance, annual_interest_rate):
     """
     Assume that the interest is compounded monthly according to the balance
     at the end of the month (after the payment for that month is made).
-    
+
     The monthly payment must be a multiple of $10 and is the same for all
     months.
-    
+
     Notice that it is possible for the balance to become negative using this
     payment scheme, which is okay. A summary of the required math is found
     below:
-    
+
     Monthly interest rate = (Annual interest rate) / 12.0
     Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
     Updated balance each month = (Monthly unpaid balance) +
@@ -73,7 +73,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingDebtOffInAYear(data[0],data[1]))
+    print(paying_Debt_Off_In_A_Year(data[0],data[1]))
     
 if __name__== "__main__":
     main()
