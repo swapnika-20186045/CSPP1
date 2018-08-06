@@ -31,7 +31,6 @@ def payingDebtOffInAYear(initial_balance, annual_interest_rate):
     mfp = 0
     while True:
         ubm = initial_balance
-        mfp += 10
         for _ in range(12):
             mir = annual_interest_rate/12.0
             mub = ubm - mfp
@@ -39,6 +38,7 @@ def payingDebtOffInAYear(initial_balance, annual_interest_rate):
         # print(mfp)
         if ubm <= 0:
             break
+        mfp += 10
     return "Lowest Payment: "+str(mfp)
 
 def main():
