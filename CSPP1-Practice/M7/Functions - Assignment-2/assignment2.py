@@ -35,7 +35,7 @@ Updated balance each month = (Monthly unpaid balance)+
 
 '''
 
-def paying_Debt_Off_In_A_Year(initial_balance, annual_interest_rate):
+def paying_debt_off_in_a_year(initial_balance, annual_interest_rate):
     """
     Assume that the interest is compounded monthly according to the balance
     at the end of the month (after the payment for that month is made).
@@ -73,7 +73,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(paying_Debt_Off_In_A_Year(data[0],data[1]))
+    print(paying_debt_off_in_a_year(data[0],data[1]))
     
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
