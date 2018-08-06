@@ -42,27 +42,26 @@ Created on 06-08-2018
 
 
 def payingDebtOffInAYear(initial_balance, annual_interest_rate):
-    epsilon_val = 0
+    epsilon_val = 0.05
     upper_bound = initial_balance*((1+annual_interest_rate/12.0)**12)/12.0
     mfp = 0
     lower_bound = initial_balance/12.0
     # print(lower_bound,upper_bound)
+    mir = annual_interest_rate/12.0
     while True:
+        # print(mfp)
         ubm = initial_balance
         mfp = (lower_bound+upper_bound)/2.0
-        mfp = int(mfp*100)/100.0
         for _ in range(12):
-            mir = annual_interest_rate/12.0
             mub = ubm - mfp
             ubm = mub + mir*mub
-            ubm = int(ubm*100)/100.0
-        if ubm<0:
-            break
-        else:
-            # mfp = (mfp+lower_bound)/2
-            # if ubm > 0.5:
+        if ubm > epsilon_val:
             lower_bound = mfp
-            # print(mfp)
+        elif ubm < -epsilon_val:
+            upper_bound = mfp
+        else:
+            break
+    # mfp = int(mfp*100)/100.0
     return mfp
 
 def main():
