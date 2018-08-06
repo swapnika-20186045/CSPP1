@@ -16,7 +16,7 @@ def payingdebt_offinayear(bal_ance, annual_interestrate, monthly_paymentrate):
         mub = (balance_copy) - (mmp)
         balance_copy = (mub) + (mir*mub)
         i += 1
-    return "Remaining balance:" + str(round(balance_copy, 2))
+    return "Remaining balance: " + str(round(balance_copy, 2))
 
 def main():
     '''The following variables contain values as described below:
