@@ -38,10 +38,10 @@ Updated balance each month = (Monthly unpaid balance)+
 def paying_debt_off_in_a_year(initial_balance, annual_interest_rate):
     """
     Assume that the interest is compounded monthly according to the balance
-    at the end of the month (after the payment for that month is made).
+    at the end of the month (after the payment for that month is made)
 
     The monthly payment must be a multiple of $10 and is the same for all
-    months.
+    months
 
     Notice that it is possible for the balance to become negative using this
     payment scheme, which is okay. A summary of the required math is found
@@ -73,7 +73,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(paying_debt_off_in_a_year(data[0],data[1]))
+    print(paying_debt_off_in_a_year(data[0], data[1]))
     
 if __name__ == "__main__":
     main()
