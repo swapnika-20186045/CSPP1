@@ -39,7 +39,7 @@ def payingDebtOffInAYear(initial_balance, annual_interest_rate):
         # print(mfp)
         if ubm <= 0:
             break
-    return mfp
+    return "Lowest Payment:",mfp
 
 def main():
     data = input()
