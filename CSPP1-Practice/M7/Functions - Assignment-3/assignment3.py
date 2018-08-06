@@ -62,7 +62,7 @@ def payingDebtOffInAYear(initial_balance, annual_interest_rate):
         else:
             break
     # mfp = int(mfp*100)/100.0
-    return mfp
+    return int(mfp*100)/100.0
 
 def main():
     data = input()
