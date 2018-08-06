@@ -60,7 +60,7 @@ def payingDebtOffInAYear(initial_balance, annual_interest_rate):
             break
         else:
             # mfp = (mfp+lower_bound)/2
-            if ubm > 0:
+            if ubm > 0.5:
                 lower_bound = mfp
             else:
                 upper_bound = mfp
