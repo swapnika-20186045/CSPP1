@@ -39,7 +39,7 @@ Created on 06-08-2018
 # large inputs, and notice how fast it is (try the same large inputs in your solution to Problem 2 to compare!). Produce the same return
 # value as you did in Assignment 2.
 
-
+import math
 
 def payingDebtOffInAYear(initial_balance, annual_interest_rate):
     epsilon_val = 0.05
