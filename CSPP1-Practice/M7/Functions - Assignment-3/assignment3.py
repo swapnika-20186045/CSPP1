@@ -54,6 +54,7 @@ def payingDebtOffInAYear(initial_balance, annual_interest_rate):
             mir = annual_interest_rate/12.0
             mub = ubm - mfp
             ubm = mub + mir*mub
+            ubm = int(ubm*100)/100.0
         if ubm<0.05:
             break
         else:
