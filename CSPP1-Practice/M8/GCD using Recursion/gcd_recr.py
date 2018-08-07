@@ -14,7 +14,7 @@ def gcd_recur(a_a, b_b):
     '''
     min_val = min(a_a, b_b)
     if min_val == a_a:
-        a_a, b_b = b_b, a_a
+        (a_a, b_b) = (b_b, a_a)
     if a_a%b_b == 0:
         return b_b
     return gcd_recur(b_b, a_a%b_b)
