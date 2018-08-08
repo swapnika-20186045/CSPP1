@@ -1,8 +1,7 @@
 '''
 Author: Swapnika
 Created on 08-08-2018
-'''
-'''
+
 Exercise: Assignment-1
 First, implement the function isWordGuessed that takes in two parameters -
 a string, secret_word, and a list of letters, letters_guessed. This function
