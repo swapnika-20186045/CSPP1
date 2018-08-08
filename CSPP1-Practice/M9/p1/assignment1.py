@@ -21,8 +21,7 @@ def is_word_guessed(secret_word, letters_guessed):
         secret_word = secret_word.replace(each_char,"")
     return secret_word == "" 
 
-def function():
-    pass main():
+def main():
     '''
     Main function for the program
     '''
