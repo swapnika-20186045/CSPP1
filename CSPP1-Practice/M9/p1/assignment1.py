@@ -17,12 +17,12 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in
     letters_guessed; False otherwise
     '''
-	for each_char in letters_guessed:
-		secret_word = secret_word.replace(each_char,"")
-	return secret_word == "" 
+    for each_char in letters_guessed:
+        secret_word = secret_word.replace(each_char,"")
+    return secret_word == "" 
 
 def function():
- 	pass main():
+    pass main():
     '''
     Main function for the program
     '''
