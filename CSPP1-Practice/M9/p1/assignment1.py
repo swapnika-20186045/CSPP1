@@ -9,7 +9,6 @@ a string, secret_word, and a list of letters, letters_guessed. This function
 returns a boolean - True if secret_word has been guessed (ie, all the letters
 of secret_word are in letters_guessed) and False otherwise.
 '''
-
 def is_word_guessed(secret_word, letters_guessed):
     '''
     secret_word: string, the word the user is guessing
@@ -18,8 +17,8 @@ def is_word_guessed(secret_word, letters_guessed):
     letters_guessed; False otherwise
     '''
     for each_char in letters_guessed:
-        secret_word = secret_word.replace(each_char,"")
-    return secret_word == "" 
+        secret_word = secret_word.replace(each_char, "")
+    return secret_word == ""
 
 def main():
     '''
