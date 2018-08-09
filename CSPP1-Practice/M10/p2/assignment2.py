@@ -78,7 +78,7 @@ def hangman(secretWord):
     guessword = "_"*len(secretWord)
     print(guessword)
 
-    while(guessword != secretWord):
+    while(guessword != secretWord or no_of_guesses_left != 0):
         guess = input("Enter your guess:")
         no_of_guesses_left -= 1
         if guess in secretWord:
