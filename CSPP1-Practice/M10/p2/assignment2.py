@@ -1,4 +1,7 @@
 '''
+Author: Swapnika
+Created on 09-08-2018
+
 Exercise : Assignment-2
 implement the function hangman, which takes one parameter - the secretWord 
 the user is to guess. This starts up an interactive game of Hangman between 
@@ -70,7 +73,27 @@ def hangman(secretWord):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE...
-    pass
+    no_of_guesses_left = len(secretWord)+3
+    print("the secret word contains "+str(len(secretWord))+" letters, and chances to guess"+str(len(secretWord)))
+    guessword = "_"*len(secretWord)
+    print(guessword)
+
+    while(guessword != secretWord):
+        guess = input("Enter your guess:")
+        no_of_guesses_left -= 1
+        if guess in secretWord:
+            print("Entered response is correct!")
+            for i in range(len(secretWord)):
+                if secretWord[i] == guess:
+                    guessword = guessword[:i]+guess+guessword[i+1:]
+            print("You have "+str(no_of_guesses_left)+" left!!")
+        else:
+            print("Oops!! that was an incorrect guess!!!!! you have "+str(no_of_guesses_left))
+        print(guessword)
+    else:
+        print("CONGRATULATIONS!!!")
+    if guessword != secretWord:
+        print("And your secret word is "+secretWord)
 
 
 
@@ -79,11 +102,11 @@ def main():
     Main function for the given program
     
     When you've completed your hangman function, uncomment these two lines
-	and run this file to test! (hint: you might want to pick your own
-	secretWord while you're testing)
-	'''
-	# secretWord = chooseWord(wordlist).lower()
-	# hangman(secretWord)
+    and run this file to test! (hint: you might want to pick your own
+    secretWord while you're testing)
+    '''
+    secretWord = chooseWord(wordlist).lower()
+    hangman(secretWord)
 
 
 if __name__ == "__main__":
