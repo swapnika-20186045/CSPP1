@@ -9,9 +9,9 @@ Created on 09-08-2018
 #calculateHandlen function, which can be done in under five lines of code.
 
 def calculate_handlen(ha_nd):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
-    
+
     hand: dictionary (string int)
     returns: integer
     """
@@ -21,12 +21,14 @@ def calculate_handlen(ha_nd):
     return sum_val
 
 def main():
+    '''main function'''
     num_n = input()
     a_dict = {}
-    for i_i in range(int(num_n)):
+    for i in range(int(num_n)):
         da_ta = input()
         l_1 = da_ta.split()
         a_dict[l_1[0]] = int(l_1[1])
+        i += 1
     print(calculate_handlen(a_dict))
         
 if __name__ == "__main__":
