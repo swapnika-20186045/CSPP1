@@ -39,10 +39,8 @@ def is_validword(wo_rd, ha_nd, word_list):
     if length_word == co_unt:
         if wo_rd in word_list:
             return True
-        else:
-            return False
-    else:
         return False
+    return False
     
 
 def main():
@@ -54,6 +52,7 @@ def main():
         data = input()
         length_word = data.split()
         a_dict[length_word[0]] = int(length_word[1])
+        i += 1
     l_2 = input().split()
     print(is_validword(wo_rd, a_dict, l_2))
         
