@@ -47,7 +47,7 @@ def is_validword(wo_rd, ha_nd, word_list):
 
 def main():
     '''main function'''
-    word = input()
+    wo_rd = input()
     num_n = int(input())
     a_dict = {}
     for i in range(num_n):
