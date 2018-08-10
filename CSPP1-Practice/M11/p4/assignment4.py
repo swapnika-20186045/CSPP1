@@ -30,6 +30,6 @@ def main():
         a_dict[l_1[0]] = int(l_1[1])
         i += 1
     print(calculate_handlen(a_dict))
-   
+
 if __name__ == "__main__":
     main()
