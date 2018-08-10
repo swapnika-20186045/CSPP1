@@ -20,7 +20,7 @@ Created on 09-08-2018
 #Fill in the code for isValidWord in ps4a.py and be sure you've passed the
 #appropriate tests in test_ps4a.py before pasting your function definition here.
 
-def isValidWord(word, hand, word_list):
+def isValidWord(wo_rd, ha_nd, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -31,31 +31,32 @@ def isValidWord(word, hand, word_list):
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
-    count = 0
-    length_word =len(word)
-    for letter in word:
-        if letter in hand:
-            count += 1
-    if length_word == count:
-    	if word in word_list:
-    		return True
-    	else:
-    		return False
+    co_unt = 0
+    length_word =len(wo_rd)
+    for letter_i in wo_rd:
+        if letter_i in ha_nd:
+            co_unt += 1
+    if length_word == co_unt:
+        if wo_rd in word_list:
+            return True
+        else:
+            return False
     else:
-    	return False
+        return False
     
 
 def main():
-	'''main function'''
-	word = input()
-	n = int(input())
-	adict = {}
-	for i in range(n):
-		data = input()
-		length_word = data.split()
-		adict[length_word[0]] = int(length_word[1])
-	l2 = input().split()
-	print(isValidWord(word,adict,l2))
-		
+    '''main function'''
+    word = input()
+    num_n = int(input())
+    a_dict = {}
+    for i in range(num_n):
+        data = input()
+        length_word = data.split()
+        a_dict[length_word[0]] = int(length_word[1])
+        i += 1
+    l_2 = input().split()
+    print(is_validword(wo_rd,a_dict,l_2))
+        
 if __name__ == "__main__":
-	main()
+    main()
