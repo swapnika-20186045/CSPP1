@@ -26,13 +26,13 @@ def is_validword(wo_rd, ha_nd, word_list):
     composed of letters in the hand. Otherwise, returns False.
 
     Does not mutate hand or wordList.
-   
+
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
     co_unt = 0
-    length_word =len(wo_rd)
+    length_word = len(wo_rd)
     for letter_i in wo_rd:
         if letter_i in ha_nd:
             co_unt += 1
@@ -41,7 +41,6 @@ def is_validword(wo_rd, ha_nd, word_list):
             return True
         return False
     return False
-    
 
 def main():
     '''main function'''
@@ -55,6 +54,6 @@ def main():
         i += 1
     l_2 = input().split()
     print(is_validword(wo_rd, a_dict, l_2))
-        
+
 if __name__ == "__main__":
     main()
