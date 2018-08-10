@@ -20,7 +20,7 @@ Created on 09-08-2018
 #Fill in the code for isValidWord in ps4a.py and be sure you've passed the
 #appropriate tests in test_ps4a.py before pasting your function definition here.
 
-def isValidWord(wo_rd, ha_nd, word_list):
+def is_validword(wo_rd, ha_nd, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -55,7 +55,7 @@ def main():
         length_word = data.split()
         a_dict[length_word[0]] = int(length_word[1])
     l_2 = input().split()
-    print(is_validword(wo_rd,a_dict,l_2))
+    print(is_validword(wo_rd, a_dict, l_2))
         
 if __name__ == "__main__":
     main()
