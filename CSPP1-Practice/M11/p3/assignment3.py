@@ -20,7 +20,7 @@ Created on 09-08-2018
 #Fill in the code for isValidWord in ps4a.py and be sure you've passed the
 #appropriate tests in test_ps4a.py before pasting your function definition here.
 
-def isValidWord(word, hand, wordList):
+def isValidWord(word, hand, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -32,12 +32,12 @@ def isValidWord(word, hand, wordList):
     wordList: list of lowercase strings
     """
     count = 0
-    l =len(word)
+    length_word =len(word)
     for letter in word:
         if letter in hand:
             count += 1
-    if l == count:
-    	if word in wordList:
+    if length_word == count:
+    	if word in word_list:
     		return True
     	else:
     		return False
@@ -46,14 +46,15 @@ def isValidWord(word, hand, wordList):
     
 
 def main():
-	word=input()
-	n=int(input())
-	adict={}
+	'''main function'''
+	word = input()
+	n = int(input())
+	adict = {}
 	for i in range(n):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	l2=input().split()
+		data = input()
+		length_word = data.split()
+		adict[length_word[0]] = int(length_word[1])
+	l2 = input().split()
 	print(isValidWord(word,adict,l2))
 		
 if __name__ == "__main__":
