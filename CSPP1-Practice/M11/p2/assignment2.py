@@ -30,14 +30,14 @@ def updateHand(given_hand, given_word):
     return given_hand
 
 def main():
-    n=input()
-    adict={}
-    for i in range(int(n)):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    data1=input()
-    print(updateHand(adict,data1))
+    num_n = input()
+    a_dict = {}
+    for i_i in range(int(num_n)):
+        da_ta = input()
+        l_l = da_ta.split()
+        a_dict[l_l[0]] = int(l_l[1])
+    data_1 = input()
+    print(updateHand(a_dict, data_1))
         
 if __name__ == "__main__":
     main()
