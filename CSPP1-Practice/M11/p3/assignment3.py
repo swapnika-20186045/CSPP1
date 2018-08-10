@@ -54,7 +54,6 @@ def main():
         data = input()
         length_word = data.split()
         a_dict[length_word[0]] = int(length_word[1])
-        i += 1
     l_2 = input().split()
     print(is_validword(wo_rd,a_dict,l_2))
         
