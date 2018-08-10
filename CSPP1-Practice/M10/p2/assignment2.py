@@ -74,13 +74,12 @@ def hangman(secretWord):
     '''
     # FILL IN YOUR CODE HERE...
     no_of_guesses_left = len(secretWord)+3
-    print("the secret word contains "+str(len(secretWord))+" letters, and chances to guess"+str(len(secretWord)))
+    print("the secret word contains "+str(len(secretWord))+" letters, and chances to guess"+str(len(secretWord)+3))
     guessword = "_"*len(secretWord)
     print(guessword)
 
-    while(guessword != secretWord or no_of_guesses_left != 0):
+    while(guessword != secretWord or no_of_guesses_left == 0):
         guess = input("Enter your guess:")
-        no_of_guesses_left -= 1
         if guess in secretWord:
             print("Entered response is correct!")
             for i in range(len(secretWord)):
@@ -88,6 +87,7 @@ def hangman(secretWord):
                     guessword = guessword[:i]+guess+guessword[i+1:]
             print("You have "+str(no_of_guesses_left)+" left!!")
         else:
+            no_of_guesses_left -= 1
             print("Oops!! that was an incorrect guess!!!!! you have "+str(no_of_guesses_left))
         print(guessword)
     else:
