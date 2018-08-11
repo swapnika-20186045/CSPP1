@@ -43,7 +43,7 @@ def create_social_network(data):
     dictionary = {}
     for i in range(0, len(data),2):
         if data[i] not in dictionary:
-            dictionary[data[i]] = dictionary[data[i+1]].split(',')
+            dictionary[data[i]] = dictionary[data[i+2]].split('\n')
     return dictionary
 
 def main():
