@@ -60,7 +60,7 @@ def delete_person(network, arg1):
     #     print("user not found!!")
     if arg1 in network:
         del network[arg1]
-    return ([arg1] + ": " + str([]))
+    return (str[arg1] + ": " + str([]))
     return "arg1 delete from everyone's friendlist"
 
 def main():
