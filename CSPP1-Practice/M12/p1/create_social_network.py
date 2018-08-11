@@ -44,7 +44,7 @@ def create_social_network(data):
     for i in range(0, len(data), 2):
         if data[i] in dictionary:
             dictionary[data[i]] = dictionary[data[i+1]].split('\n')
-        print dictionary
+        print (dictionary)
     return dictionary
 
 def main():
