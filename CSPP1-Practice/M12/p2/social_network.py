@@ -8,6 +8,8 @@ Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
 
 def valid(network,arg1,arg2):
+	'''validation'''
+	username = []
     if username in network:
         return True
     return False
@@ -36,7 +38,7 @@ def unfollow(network, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
-    
+
     if not valid(arg1) or not valid(arg2):
         print("user not found!!")
         if arg2 in network[arg1]:
@@ -59,7 +61,7 @@ def delete_person(network, arg1):
         if arg1 in network:
             delete[network[arg1]]
     return "arg1 delete from everyone's friendlist"
-    
+
 def main():
     '''
         handling testcase input and printing output
