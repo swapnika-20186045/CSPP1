@@ -41,9 +41,9 @@ def create_social_network(data):
     #     i = i.split("follows")
     # return i
     dictionary = {}
-    for i in range(0, len(data),2):
+    for i in range(0, len(data), 2):
         if data[i] not in dictionary:
-            dictionary[data[i]] = dictionary[data[i+2]].split('\n')
+            dictionary[data[i]] = dictionary[data[i+1]].split('\n')
     return dictionary
 
 def main():
