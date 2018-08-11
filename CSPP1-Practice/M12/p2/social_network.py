@@ -8,8 +8,7 @@ Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
 
 def valid(network,arg1,arg2):
-	'''validation'''
-	username = []
+    '''validation'''
     if username in network:
         return True
     return False
