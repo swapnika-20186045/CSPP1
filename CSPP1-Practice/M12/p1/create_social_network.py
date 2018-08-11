@@ -34,27 +34,12 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    data = input()
-    n = int(input)
-    for i in range(n):
-        data = data.split(" ")
-        i = i.split("follows")
-        a_dict[i[0]] = i[1].split(",")
-    return a_dict
-
-    # return i
-    # network = input()
-    # lines = int(input())
-    # for i in range(lines):
-    #     i += 1
-    #     line = input()
-    #     output = line.split(" ")
-    # return output
-    # dictionary = {}
-    # for i in range(0, len(data), 2):
-    #     if data[i] in dictionary:
-    #         dictionary[data[i]] = dictionary[data[i+1]].split('\n')
-    # return dictionary
+   
+    dictionary = {}
+    for i in range(0, len(data), 2):
+        if data[i] in dictionary:
+            dictionary[data[i]] = dictionary[data[i+1]].split('\n')
+    return dictionary
 
 def main():
     '''
