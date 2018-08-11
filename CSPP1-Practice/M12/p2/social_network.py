@@ -24,7 +24,7 @@ def follow(network, arg1, arg2):
     if not valid(arg1) or not valid(arg2):
         print("user not found!!")
     else:
-        network(arg1).append(arg2)
+        network[arg1].append[arg2]
     print (arg1 + " is followed by " +arg2)
 
 def unfollow(network, arg1, arg2):
@@ -40,7 +40,7 @@ def unfollow(network, arg1, arg2):
     if not valid(arg1) or not valid(arg2):
         print("user not found!!")
         if arg2 in network[arg1]:
-            network(arg1).remove(arg2)
+            network[arg1].remove[arg2]
     return "removed"
     return "arg2 not in arg1 friendlist"
 
@@ -57,7 +57,7 @@ def delete_person(network, arg1):
     if not valid(arg1) or not valid(arg2):
         print("user not found!!")
         if arg1 in network:
-            delete(network[arg1])
+            delete[network[arg1]]
     return "arg1 delete from everyone's friendlist"
     
 def main():
