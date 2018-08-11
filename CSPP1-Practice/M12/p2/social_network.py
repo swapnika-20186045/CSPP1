@@ -7,11 +7,11 @@ There are 3 functions below that have to be completed
 Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
 
-def valid(network,arg1,arg2):
-    '''validation'''
-    if username in network:
-        return True
-    return False
+# def valid(network,arg1,arg2):
+#     '''validation'''
+#     if username in network:
+#         return True
+#     return False
 
 def follow(network, arg1, arg2):
     '''
@@ -22,10 +22,10 @@ def follow(network, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    if not valid(arg1) or not valid(arg2):
-        print("user not found!!")
-    else:
-        network[arg1].append[arg2]
+    # if not valid(arg1) or not valid(arg2):
+    #     print("user not found!!")
+    # else:
+    network[arg1].append[arg2]
     print (arg1 + " is followed by " +arg2)
 
 def unfollow(network, arg1, arg2):
@@ -38,10 +38,10 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
 
-    if not valid(arg1) or not valid(arg2):
-        print("user not found!!")
-        if arg2 in network[arg1]:
-            network[arg1].remove[arg2]
+    # if not valid(arg1) or not valid(arg2):
+    #     print("user not found!!")
+    if arg2 in network[arg1]:
+        network[arg1].remove[arg2]
     return "removed"
     return "arg2 not in arg1 friendlist"
 
@@ -55,10 +55,10 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    if not valid(arg1) or not valid(arg2):
-        print("user not found!!")
-        if arg1 in network:
-            delete[network[arg1]]
+    # if not valid(arg1) or not valid(arg2):
+    #     print("user not found!!")
+    if arg1 in network:
+        delete[network[arg1]]
     return "arg1 delete from everyone's friendlist"
 
 def main():
