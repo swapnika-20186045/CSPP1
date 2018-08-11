@@ -26,7 +26,7 @@ def follow(network, arg1, arg2):
     #     print("user not found!!")
     # else:
     if arg1 not in arg2:
-        network[arg1].append(arg2)
+        adict[arg1].append(arg2)
     return arg1 + " is followed by " +arg2
 
 def unfollow(network, arg1, arg2):
@@ -42,7 +42,7 @@ def unfollow(network, arg1, arg2):
     # if not valid(arg1) or not valid(arg2):
     #     print("user not found!!")
     if arg2 in network[arg1]:
-        network[arg1].remove(arg2)
+        adict[arg1].remove(arg2)
     return "removed"
     return "arg2 not in arg1 friendlist"
 
@@ -83,4 +83,5 @@ def main():
     print(network)
 
 if __name__ == "__main__":
+    adict = {}
     main()
