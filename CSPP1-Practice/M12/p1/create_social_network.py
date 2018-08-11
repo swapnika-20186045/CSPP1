@@ -40,18 +40,18 @@ def create_social_network(data):
     #     data = data.split(" ")
     #     i = i.split("follows")
     # return i
-    network = input()
-    lines = int(input())
-    for i in range(lines):
-        i += 1
-        line = input()
-        output = line.split(" ")
-    return output
-    # dictionary = {}
-    # for i in range(0, len(data), 2):
-    #     if data[i] in dictionary:
-    #         dictionary[data[i]] = dictionary[data[i+1]].split('\n')
-    # return dictionary
+    # network = input()
+    # lines = int(input())
+    # for i in range(lines):
+    #     i += 1
+    #     line = input()
+    #     output = line.split(" ")
+    # return output
+    dictionary = {}
+    for i in range(0, len(data), 2):
+        if data[i] in dictionary:
+            dictionary[data[i]] = dictionary[data[i+1]].split('\n')
+    return dictionary
 
 def main():
     '''
