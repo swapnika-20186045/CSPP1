@@ -5,15 +5,15 @@
 '''
 
 def int_cast(card):
-    if card[0] = 'T':
+    if card[0] == 'T':
         return 10
-    elif card[0]= 'J':
+    elif card[0] == 'J':
         return 11
-    elif card[0]= 'Q':
+    elif card[0] == 'Q':
         return 12
-    elif card[0]= 'K':
+    elif card[0] == 'K':
         return 13
-    elif card[0]= 'A':
+    elif card[0] == 'A':
         return 14
     return int(card[0])
 
