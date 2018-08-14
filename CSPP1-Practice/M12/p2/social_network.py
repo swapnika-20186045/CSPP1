@@ -25,8 +25,8 @@ def follow(network, arg1, arg2):
     # if not valid(arg1) or not valid(arg2):
     #     print("user not found!!")
     # else:
-    if arg1 not in arg2:
-        adict[arg1].append(arg2)
+    if arg1 not in network:
+        network[arg1].append(arg2)
     return arg1 + " is followed by " +arg2
 
 def unfollow(network, arg1, arg2):
