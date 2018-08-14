@@ -97,11 +97,11 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straightflush(hand):
-        return 3 * int_cast(max(hands, key=int_cast))
+        return 3 * int_cast(max(hand, key=int_cast))
     elif is_flush(hand):
-        return 2 * int_cast(max(hands, key=int_cast))
+        return 2 * int_cast(max(hand, key=int_cast))
     elif is_straight(hand):
-        return 1 * int_cast(max(hands, key=int_cast))
+        return 1 * int_cast(max(hand, key=int_cast))
     return 0
 
 def poker(hands):
@@ -122,16 +122,16 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    return max(hand, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
     # iterate through the test cases to set up hands list
-    HANDS = []
+    HAND = []
     for x in range(COUNT):
         line = input()
         ha = line.split(" ")
-        HANDS.append(ha)
+        HAND.append(ha)
     # test the poker function to see how it works
-    print(' '.join(poker(HANDS)))
+    print(' '.join(poker(HAND)))
