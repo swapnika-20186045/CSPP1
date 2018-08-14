@@ -5,17 +5,21 @@
 '''
 
 def int_cast(card):
+    '''give values to letters'''
+    card_value = 0
     if card[0] == 'T':
-        return 10
+        card_value = 10
     elif card[0] == 'J':
-        return 11
+        card_value = 11
     elif card[0] == 'Q':
-        return 12
+        card_value = 12
     elif card[0] == 'K':
-        return 13
+        card_value = 13
     elif card[0] == 'A':
-        return 14
-    return int(card[0])
+        card_value = 14
+    else:
+        card_value = int(card[0])
+    return card_value
 
 def is_straight(hand):
     '''
@@ -27,7 +31,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    temp_hand = sorted(hand, key = int_cast) 
+    temp_hand = sorted(hand, key=int_cast)
     for card_index in range(len(hand)-1):
         if int_cast(temp_hand[card_index+1]) - int_cast(temp_hand[card_index]) != 1:
             return False
@@ -96,13 +100,16 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
+    rank_value = 0
     if is_straightflush(hand):
-        return 3 * int_cast(max(hand, key=int_cast))
+        rank_value = 3 * int_cast(max(hand, key=int_cast))
     elif is_flush(hand):
-        return 2 * int_cast(max(hand, key=int_cast))
+        rank_value = 2 * int_cast(max(hand, key=int_cast))
     elif is_straight(hand):
-        return 1 * int_cast(max(hand, key=int_cast))
-    return 0
+        rank_value = 1 * int_cast(max(hand, key=int_cast))
+    else:
+        rank_value = 0
+    return rank_value
 
 def poker(hands):
     '''
