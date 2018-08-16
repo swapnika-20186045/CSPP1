@@ -22,8 +22,8 @@ def kind(ranks, n):
 
 def is_two_pair(ranks):
     '''two pair function'''
-    high_val = kind(rank, 2)
-    low_val = sorted(kind(rank, 2))
+    high_val = kind(ranks, 2)
+    low_val = sorted(kind(ranks, 2))
     if high_val != low_val:
         return high_val, low_val, ranks
 
