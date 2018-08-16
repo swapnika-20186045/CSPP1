@@ -8,7 +8,7 @@ def is_straight(hand):
     '''
      straight function   
     '''
-    stng_values = "--23456789TQKA"
+    stng_values = "--23456789TJQKA"
     hand_values = []
     for i in hand:
         hand_values.append(stng_values.index(i[0]))
