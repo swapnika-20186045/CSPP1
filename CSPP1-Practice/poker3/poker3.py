@@ -25,7 +25,7 @@ def is_two_pair(ranks):
     high_val = kind(rank,2)
     low_val = sorted(kind(rank,2))
     if high_val != low_val:
-        return high_val, low_val
+        return high_val, low_val, ranks
 
 def is_flush(hand):
     '''
