@@ -22,8 +22,8 @@ def kind(ranks, n):
 
 def is_two_pair(ranks):
     '''two pair function'''
-    high_val = kind(rank,2)
-    low_val = sorted(kind(rank,2))
+    high_val = kind(rank, 2)
+    low_val = sorted(kind(rank, 2))
     if high_val != low_val:
         return high_val, low_val, ranks
 
@@ -55,8 +55,8 @@ def hand_rank(hand):
         return 3, kind(rank, 3), rank
     if is_twopair(rank):
         return 2, is_two_pair(rank), rank
-    if kind(rank,2):
-        return 1, kind(rank,2), rank
+    if kind(rank, 2):
+        return 1, kind(rank, 2), rank
     return 0, rank
 
 def poker(hands):
