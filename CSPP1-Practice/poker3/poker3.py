@@ -41,7 +41,7 @@ def hand_rank(hand):
     hand rank function
     '''
     rank = hand_values(hand)
-    if is_straight(hand) and is_flush(hand):
+    if is_straight(rank) and is_flush(hand):
         return 8, (rank)
     if kind(rank, 4):
         return 7, kind(rank, 4), rank
