@@ -6,7 +6,7 @@
 
 def is_straight(hand):
     '''
-     straight function   
+     straight function
     '''
     stng_values = "--23456789TJQKA"
     hand_values = []
@@ -20,7 +20,7 @@ def is_straight(hand):
 
 def is_flush(hand):
     '''
-      Flush function 
+      Flush function
     '''
     values_set = set({})
     for i in hand:
@@ -31,7 +31,7 @@ def is_four(hand):
     '''
     four of a kind function
     '''
-    hand_values = [f_1 for f_1,s in hand]
+    hand_values = [f_1 for f_1, s in hand]
     set_val = set(hand_values)
     if len(set_val) != 2:
         return False
@@ -44,7 +44,7 @@ def is_three(hand):
     '''
     three of a kind
     '''
-    hand_values = [f_1 for f_1,s in hand]
+    hand_values = [f_1 for f_1, s in hand]
     set_val = set(hand_values)
     if len(set_val) <= 2:
         return False
@@ -57,7 +57,7 @@ def is_onepair(hand):
     '''
     one of a kind function
     '''
-    hand_values = [f_1 for f_1,s in hand]
+    hand_values = [f_1 for f_1, s in hand]
     set_val = set(hand_values)
     twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
     if len(twopairs) != 1:
@@ -68,7 +68,7 @@ def is_full(hand):
     '''
     full hand function
     '''
-    hand_values = [f_1 for f_1,s in hand]
+    hand_values = [f_1 for f_1, s in hand]
     set_val = set(hand_values)
     if len(set_val) != 2:
         return False
@@ -81,7 +81,7 @@ def is_twopair(hand):
     '''
     two of a kind function
     '''
-    hand_values = [f_1 for f_1,s in hand]
+    hand_values = [f_1 for f_1, s in hand]
     set_val = set(hand_values)
     twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
     if len(twopairs) != 2:
@@ -94,9 +94,9 @@ def hand_rank(hand):
     '''
     rank_value = 0
     if is_straight(hand) and is_flush(hand):
-        rank_value = 8 
+        rank_value = 8
     elif is_flush(hand):
-        rank_value = 7 
+        rank_value = 7
     elif is_straight(hand):
         rank_value = 6
     elif is_four(hand):
