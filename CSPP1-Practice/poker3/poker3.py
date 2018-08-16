@@ -14,10 +14,10 @@ def is_straight(ranks):
     '''
     return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14)
 
-def kind(ranks, n):
+def kind(ranks, num_n):
     '''which kind'''
     for i in ranks:
-        if ranks.count(i) == n:
+        if ranks.count(i) == num_n:
             return i
 
 def is_two_pair(ranks):
