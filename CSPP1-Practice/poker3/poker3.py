@@ -6,7 +6,7 @@
 
 def hand_values(hand):
     '''values'''
-    return sorted((["--23456789TJQKA".index(c) for c,x in hand]), reverse = True)
+    return sorted((["--23456789TJQKA".index(c) for c, x in hand]), reverse = True)
 
 def is_straight(ranks):
     '''
@@ -17,8 +17,8 @@ def is_straight(ranks):
 def kind(ranks, n):
     '''which kind'''
     for i in ranks:
-        ranks.count(i) == n
-        return i
+        if ranks.count(i) == n:
+            return i
 
 def is_two_pair(ranks):
     '''two pair function'''
