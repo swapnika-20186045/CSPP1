@@ -49,7 +49,7 @@ def hand_rank(hand):
         return 6, kind(rank, 3), kind(rank, 2), rank
     if is_flush(hand):
         return 5, rank
-    if is_straight(hand):
+    if is_straight(rank):
         return 4, rank
     if kind(rank, 3):
         return 3, kind(rank, 3), rank
