@@ -5,20 +5,23 @@
 '''
 
 def hand_values(hand):
+    '''values'''
     return sorted((["--23456789TJQKA".index(c) for c,x in hand]), reverse = True)
 
 def is_straight(ranks):
     '''
      straight function
     '''
-    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) #or (ranks[0:5] == [5, 4, 3, 2] and ranks[0] == 14)
+    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or (ranks[0:5] == [5, 4, 3, 2] and ranks[0] == 14)
 
 def kind(ranks, n):
+    '''which kind'''
     for i in ranks:
         ranks.count(i) == n
         return i
 
 def is_two_pair(ranks):
+    '''two pair function'''
     high_val = kind(rank,2)
     low_val = sorted(kind(rank,2))
     if high_val != low_val:
@@ -55,7 +58,7 @@ def hand_rank(hand):
     if kind(rank,2):
         return 1, kind(rank,2), rank
     return 0, rank
-        
+
 def poker(hands):
     '''
     poker function
