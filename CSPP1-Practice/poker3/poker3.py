@@ -4,115 +4,58 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 
-def is_straight(hand):
+def hand_values(hand):
+    return sorted((["--23456789TJQKA".index(c) for c,x in hand]), reverse = True)
+
+def is_straight(ranks):
     '''
      straight function
     '''
-    stng_values = "--23456789TJQKA"
-    hand_values = []
-    for i in hand:
-        hand_values.append(stng_values.index(i[0]))
-    hand_values.sort()
-    for i in range(len(hand_values) - 1):
-        if hand_values[i] - hand_values[i+1] != -1:
-            return False
-    return True
+    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or (ranks[0:5] == [5, 4, 3, 2] and ranks[0] == 14)
+
+def kind(ranks, n):
+    for i in ranks:
+        ranks.count(i) == n
+        return i
+
+def is_two_pair(ranks):
+    high_val = kind(rank,2)
+    low_val = sorted(kind(rank,2))
+    if high_val != low_val:
+        return high_val, low_val
 
 def is_flush(hand):
     '''
       Flush function
     '''
-    values_set = set({})
+    value_set = set()
     for i in hand:
-        values_set.add(i[1])
-    return len(values_set) == 1
-
-def is_four(hand):
-    '''
-    four of a kind function
-    '''
-    hand_values = [f_1 for f_1, s in hand]
-    set_val = set(hand_values)
-    if len(set_val) != 2:
-        return False
-    for f_1 in set_val:
-        if hand_values.count(f_1) == 4:
-            return True
-    return False
-
-def is_three(hand):
-    '''
-    three of a kind
-    '''
-    hand_values = [f_1 for f_1, s in hand]
-    set_val = set(hand_values)
-    if len(set_val) <= 2:
-        return False
-    for f_1 in set_val:
-        if hand_values.count(f_1) == 3:
-            return True
-    return False
-
-def is_onepair(hand):
-    '''
-    one of a kind function
-    '''
-    hand_values = [f_1 for f_1, s in hand]
-    set_val = set(hand_values)
-    twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
-    if len(twopairs) != 1:
-        return False
-    return True
-
-def is_full(hand):
-    '''
-    full hand function
-    '''
-    hand_values = [f_1 for f_1, s in hand]
-    set_val = set(hand_values)
-    if len(set_val) != 2:
-        return False
-    for f_1 in set_val:
-        if hand_values.count(f_1) == 3:
-            return True
-    return False
-
-def is_twopair(hand):
-    '''
-    two of a kind function
-    '''
-    hand_values = [f_1 for f_1, s in hand]
-    set_val = set(hand_values)
-    twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
-    if len(twopairs) != 2:
-        return False
-    return True
+        value_set.add(i[1])
+    return len(value_set) == 1
 
 def hand_rank(hand):
     '''
     hand rank function
     '''
-    rank_value = 0
+    rank = hand_values(hand)
     if is_straight(hand) and is_flush(hand):
-        rank_value = 8
-    elif is_flush(hand):
-        rank_value = 7
-    elif is_straight(hand):
-        rank_value = 6
-    elif is_four(hand):
-        rank_value = 5
-    elif is_three(hand):
-        rank_value = 4
-    elif is_onepair(hand):
-        rank_value = 3
-    elif is_full(hand):
-        rank_value = 2
-    elif is_twopair(hand):
-        rank_value = 1
-    else:
-        rank_value = 0
-    return rank_value
-
+        return 8, (rank)
+    if kind(rank, 4):
+        return 7, kind(rank, 4), rank
+    if kind(rank, 3) and kind(rank, 2):
+        return 6, kind(rank, 3), kind(rank, 2), rank
+    if is_flush(hand):
+        return 5, rank
+    if is_straight(hand):
+        return 4, rank
+    if kind(rank, 3):
+        return 3, kind(rank, 3), rank
+    if is_twopair(rank):
+        return 2, is_two_pair(rank), rank
+    if kind(rank,2):
+        return 1, kind(rank,2), rank
+    return 0, rank
+        
 def poker(hands):
     '''
     poker function
