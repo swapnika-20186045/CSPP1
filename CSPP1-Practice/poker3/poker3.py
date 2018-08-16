@@ -12,8 +12,7 @@ def is_straight(ranks):
     '''
      straight function
     '''
-    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5)
-    or (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14)
+    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14)
 
 def kind(ranks, n):
     '''which kind'''
