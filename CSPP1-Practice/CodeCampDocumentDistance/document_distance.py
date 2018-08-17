@@ -11,6 +11,7 @@ def similarity(common_dict):
     num_val = 0
     den_1 = 0
     den_2 = 0
+    distance = 0
     for i in common_dict:
         num_val += common_dict[i][0] * common_dict[i][1]
         den_1 += common_dict[i][0] ** 2
