@@ -4,7 +4,7 @@
 import re
 import math
 
-def similarity(common_dict, dict1, dict2):
+def similarity(common_dict):
     '''
         Compute the document distance as given in the PDF
     '''
@@ -13,9 +13,7 @@ def similarity(common_dict, dict1, dict2):
     den_2 = 0
     for i in common_dict:
         num_val += common_dict[i][0] * common_dict[i][1]
-    for j in dict1:
         den_1 += dict1[j] ** 2
-    for k in dict2:
         den_2 += dict2[k] ** 2
 
     distance = (num_val) / math.sqrt(den_1 * den_2)
@@ -74,7 +72,7 @@ def freq_count(list_1, list_2):
             common_dict[i] = [freq_dict1[i], freq_dict2[i]]
         else:
             common_dict[i] = [freq_dict1[i], 0]
-    for p_1 in common_dict:
+    for p_1 in freq_dict2:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_dict2[p_1]]
     # print(common_dict)
