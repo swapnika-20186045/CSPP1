@@ -17,7 +17,7 @@ def similarity(common_dict):
         num_val += common_dict[i][0] * common_dict[i][1]
         den_1 += common_dict[i][0] ** 2
         den_2 += common_dict[i][1] ** 2
-    print(common_dict)
+    # print(common_dict)
     distance = (num_val) / (math.sqrt(den_1) * math.sqrt(den_2))
     return distance
 
@@ -91,7 +91,7 @@ def freq_count(list_1, list_2):
     for h_1 in d_1:
         if len(h_1) == 0:
             del common_dict[h_1]
-
+    print(common_dict)
     return common_dict
 
 def main():
