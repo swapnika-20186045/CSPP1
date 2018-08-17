@@ -25,7 +25,7 @@ def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
-    # file_name = stopwords.txt
+    file_name = ("stopwords.txt")
     stopwords = {}
     with open(file_name, 'r') as file_name:
         for line in file_name:
@@ -98,9 +98,9 @@ def freq_count(list_1, list_2):
     #print(common_dict)
     return common_dict
 
-def function():
-    '''stopwords'''
-    file_name = load_stopwords("stopwords.txt")
+# def function():
+#     '''stopwords'''
+#     file_name = load_stopwords("stopwords.txt")
 
 def main():
     '''
