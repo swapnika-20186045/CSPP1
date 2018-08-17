@@ -25,6 +25,7 @@ def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
+    # file_name = stopwords.txt
     stopwords = {}
     with open(file_name, 'r') as file_name:
         for line in file_name:
@@ -92,7 +93,8 @@ def freq_count(list_1, list_2):
 
     d_1 = copy.deepcopy(common_dict)
     for h_1 in d_1:
-        if len(h_1) == 0:
+        length_l = len(h_1)
+        if length_l == 0:
             del common_dict[h_1]
     #print(common_dict)
     return common_dict
