@@ -3,6 +3,7 @@
 '''
 import re
 import math
+import copy
 
 def similarity(common_dict):
     '''
