@@ -28,8 +28,8 @@ def word_list(input1, input2):
     str_1 = ""
     str_2 = ""
 
-    str_1 = re.sub('[^A-Za-z0-9]''', input1.lower())
-    str_2 = re.sub('[^A-Za-z0-9]''', input2.lower())
+    str_1 = re.sub('[^A-Za-z0-9]','', input1.lower())
+    str_2 = re.sub('[^A-Za-z0-9]','', input2.lower())
 
     list_1 = str_1.split(" ")
     list_2 = str_2.split(" ")
