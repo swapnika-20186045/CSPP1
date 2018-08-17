@@ -21,6 +21,16 @@ def similarity(dict1):
     distance = (num_val) / (math.sqrt(den_1) * math.sqrt(den_2))
     return distance
 
+def load_stopwords(file_name):
+    '''
+        loads stop words from a file and returns a dictionary
+    '''
+    stopwords = {}
+    with open(file_name, 'r') as file_name:
+        for line in file_name:
+            stopwords[line.strip()] = 0
+    return stopwords
+
 def word_list(input1, input2):
     '''making a wordlist'''
     list_1 = []
@@ -31,13 +41,13 @@ def word_list(input1, input2):
 
     str_1 = re.sub('[^a-z]', '', input1.lower())
     str_2 = re.sub('[^a-z]', '', input2.lower())
+    stopwords = load_stopwords("stopwords.txt")
+    key_list = list(stopwords.keys())
 
     list_1 = str_1.split(" ")
     list_2 = str_2.split(" ")
 
-    stopwords = load_stopwords("stopwords.txt")
-    key_list = list(stopwords.keys())
-
+    
     word_list = list_1[:]
     for i in word_list:
         if i in key_list:
@@ -49,8 +59,6 @@ def word_list(input1, input2):
             list_2.remove(i)
 
     return freq_count(list_1, list_2)
-
-    # return list_1,list_2
 
 def freq_count(list_1, list_2):
     '''frequency count in dictionaries'''
@@ -85,17 +93,7 @@ def freq_count(list_1, list_2):
         if len(h_1) == 0:
             del common_dict[h_1]
 
-    return (common_dict, freq_dict1, freq_dict2)
-
-def load_stopwords(filename):
-    '''
-        loads stop words from a file and returns a dictionary
-    '''
-    stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
-            stopwords[line.strip()] = 0
-    return stopwords
+    return common_dict
 
 def main():
     '''
