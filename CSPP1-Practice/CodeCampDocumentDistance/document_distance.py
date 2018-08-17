@@ -99,8 +99,8 @@ def freq_count(list_1, list_2):
     return common_dict
 
 def function():
-    file_name = ("stopwords.txt")
-    pass
+    '''stopwords'''
+    file_name = load_stopwords("stopwords.txt")
 
 def main():
     '''
