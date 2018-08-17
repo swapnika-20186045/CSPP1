@@ -5,7 +5,7 @@ import re
 import math
 import copy
 
-def similarity(dict1):
+def similarity(common_dict):
     '''
         Compute the document distance as given in the PDF
     '''
@@ -13,10 +13,10 @@ def similarity(dict1):
     den_1 = 0
     den_2 = 0
     distance = 0
-    for i in dict1:
-        num_val += dict1[i][0] * dict1[i][1]
-        den_1 += dict1[i][0] ** 2
-        den_2 += dict1[i][1] ** 2
+    for i in common_dict:
+        num_val += common_dict[i][0] * common_dict[i][1]
+        den_1 += common_dict[i][0] ** 2
+        den_2 += common_dict[i][1] ** 2
     print(dict1)
     distance = (num_val) / (math.sqrt(den_1) * math.sqrt(den_2))
     return distance
