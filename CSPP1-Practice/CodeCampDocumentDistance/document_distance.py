@@ -21,11 +21,11 @@ def similarity(common_dict):
     distance = (num_val) / (math.sqrt(den_1) * math.sqrt(den_2))
     return distance
 
-def load_stopwords(file_name):
+def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''
-    file_name = ("stopwords.txt")
+    file_name = "stopwords.txt"
     stopwords = {}
     with open(file_name, 'r') as file_name:
         for line in file_name:
