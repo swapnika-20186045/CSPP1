@@ -21,7 +21,7 @@ def similarity(common_dict):
     distance = (num_val) / (math.sqrt(den_1) * math.sqrt(den_2))
     return distance
 
-def load_stopwords():
+def load_stopwords( ):
     '''
         loads stop words from a file and returns a dictionary
     '''
