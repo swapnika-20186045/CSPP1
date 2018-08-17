@@ -13,8 +13,8 @@ def similarity(common_dict):
     den_2 = 0
     for i in common_dict:
         num_val += common_dict[i][0] * common_dict[i][1]
-        den_1 += dict_1[j] ** 2
-        den_2 += dict_2[k] ** 2
+        den_1 += common_dict[i] ** 2
+        den_2 += common_dict[i] ** 2
 
     distance = (num_val) / math.sqrt(den_1 * den_2)
     return distance
