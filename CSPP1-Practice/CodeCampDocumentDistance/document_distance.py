@@ -17,7 +17,7 @@ def similarity(dict1):
         num_val += dict1[i][0] * dict1[i][1]
         den_1 += dict1[i][0] ** 2
         den_2 += dict1[i][1] ** 2
-
+    print(dict1)
     distance = (num_val) / (math.sqrt(den_1) * math.sqrt(den_2))
     return distance
 
@@ -47,7 +47,6 @@ def word_list(input1, input2):
     list_1 = str_1.split(" ")
     list_2 = str_2.split(" ")
 
-    
     word_list = list_1[:]
     for i in word_list:
         if i in key_list:
@@ -87,7 +86,7 @@ def freq_count(list_1, list_2):
     for p_1 in freq_dict2:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_dict2[p_1]]
-    
+
     d_1 = copy.deepcopy(common_dict)
     for h_1 in d_1:
         if len(h_1) == 0:
