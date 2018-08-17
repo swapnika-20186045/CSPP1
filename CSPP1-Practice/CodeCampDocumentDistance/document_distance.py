@@ -56,7 +56,7 @@ def word_list(input1, input2):
     for i in word_list:
         if i in key_list:
             list_2.remove(i)
-
+    print(list_1,list_2)
     return freq_count(list_1, list_2)
 
 def freq_count(list_1, list_2):
