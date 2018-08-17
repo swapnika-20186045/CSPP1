@@ -17,6 +17,7 @@ def similarity(common_dict, dict1, dict2):
         den_1 += dict1[j] ** 2
     for k in dict2:
         den_2 += dict2[k] ** 2
+
     distance = (num_val) / math.sqrt(den_1*den_2)
     return distance
 def word_list(input1, input2):
@@ -25,7 +26,7 @@ def word_list(input1, input2):
     key_list = []
     a = ""
     b = ""
-    
+
     a = re.sub('[^A-Za-z0-9]',' ', input1.lower())
     b = re.sub('[^A-Za-z0-9]',' ', input2.lower())
     
@@ -75,13 +76,13 @@ def freq_count(list_1, list_2):
             common_dict[p] = [0, freq_dict2[p]]
     return (common_dict, freq_dict1, freq_dict2)
 
-def load_stopwords(filename):
+def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(file_name, 'r') as file_name:
+        for line in file_name:
             stopwords[line.strip()] = 0
     return stopwords
 
