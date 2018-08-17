@@ -85,6 +85,7 @@ def freq_count(list_1, list_2):
             common_dict[i] = [freq_dict1[i], freq_dict2[i]]
         else:
             common_dict[i] = [freq_dict1[i], 0]
+    
     for p_1 in freq_dict2:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_dict2[p_1]]
@@ -93,7 +94,7 @@ def freq_count(list_1, list_2):
     for h_1 in d_1:
         if len(h_1) == 0:
             del common_dict[h_1]
-    # print(common_dict)
+    print(common_dict)
     return common_dict
 
 def main():
