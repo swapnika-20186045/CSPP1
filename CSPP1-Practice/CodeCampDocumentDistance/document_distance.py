@@ -39,8 +39,8 @@ def word_list(input1, input2):
     str_1 = ""
     str_2 = ""
 
-    str_1 = re.sub('[^a-z]', '', input1.lower())
-    str_2 = re.sub('[^a-z]', '', input2.lower())
+    str_1 = re.sub('[^a-z]', ' ', input1.lower())
+    str_2 = re.sub('[^a-z]', ' ', input2.lower())
     print(str_1,str_2)
 
     list_1 = str_1.split(" ")
