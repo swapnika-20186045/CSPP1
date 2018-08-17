@@ -76,7 +76,7 @@ def freq_count(list_1, list_2):
             common_dict[p] = [0, freq_dict2[p]]
     return (common_dict, freq_dict1, freq_dict2)
 
-def load_stopwords(file_name):
+def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
