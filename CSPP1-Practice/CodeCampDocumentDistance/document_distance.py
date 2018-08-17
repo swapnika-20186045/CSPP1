@@ -12,7 +12,7 @@ def similarity(common_dict, dict1, dict2):
     den_1 = 0
     den_2 = 0
     for i in common_dict:
-        num_val += common_dict[0] * common_dict[1]
+        num_val += common_dict[i][0] * common_dict[i][1]
     for j in dict1:
         den_1 += dict1[j] ** 2
     for k in dict2:
