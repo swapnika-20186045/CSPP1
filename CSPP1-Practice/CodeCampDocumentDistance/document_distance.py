@@ -49,13 +49,13 @@ def word_list(input1, input2):
     stopwords = load_stopwords("stopwords.txt")
     key_list = list(stopwords.keys())
 
-    word_list = list_1[:]
-    for i in word_list:
+    word_list1 = list_1[:]
+    for i in word_list1:
         if i in key_list:
             list_1.remove(i)
 
-    word_list = list_2[:]
-    for i in word_list:
+    word_list2 = list_2[:]
+    for i in word_list2:
         if i in key_list:
             list_2.remove(i)
     #print(list_1,list_2)
@@ -85,7 +85,7 @@ def freq_count(list_1, list_2):
             common_dict[i] = [freq_dict1[i], freq_dict2[i]]
         else:
             common_dict[i] = [freq_dict1[i], 0]
-    
+
     for p_1 in freq_dict2:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_dict2[p_1]]
