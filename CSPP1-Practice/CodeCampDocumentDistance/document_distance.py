@@ -35,17 +35,18 @@ def word_list(input1, input2):
     list_2 = str_2.split(" ")
 
     stopwords = load_stopwords("stopwords.txt")
-    key_list = stopwords.keys()
+    key_list = list(stopwords.keys())
 
-    for i in key_list:
-        for j in list_1:
-            if i == j:
-                list_1.remove(j)
+    word_list = list_1[:]
+    for i in word_list:
+        if i in key_list:
+            list_1.remove(i)
 
-    for i in key_list:
-        for j in list_2:
-            if i == j:
-                list_2.remove(j)
+    word_list = list_2[:]
+    for i in word_list:
+        if i in key_list:
+            list_2.remove(i)
+
     return freq_count(list_1, list_2)
 
     # return list_1,list_2
@@ -55,6 +56,7 @@ def freq_count(list_1, list_2):
     freq_dict1 = {}
     freq_dict2 = {}
     common_dict = {}
+
     for k in list_1:
         if k not in freq_dict1:
             freq_dict1[k] = 1
@@ -76,8 +78,12 @@ def freq_count(list_1, list_2):
     for p_1 in freq_dict2:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_dict2[p_1]]
-    # print(common_dict)
-    # print(len(common_dict))
+    
+    d_1 = copy.deepcopy(common_dict)
+    for h_1 in d_1:
+        if len(h_1) == 0:
+            del common_dict[h_1]
+
     return (common_dict, freq_dict1, freq_dict2)
 
 def load_stopwords(filename):
@@ -97,7 +103,7 @@ def main():
     input1 = input()
     input2 = input()
 
-    (common_dict, dict_1, dict_2) = word_list(input1, input2)
+    common_dict = word_list(input1, input2)
     print(similarity(common_dict))
 
 if __name__ == '__main__':
