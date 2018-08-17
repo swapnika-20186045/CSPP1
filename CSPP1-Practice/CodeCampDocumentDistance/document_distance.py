@@ -17,7 +17,7 @@ def similarity(common_dict):
         den_1 += common_dict[i][0] ** 2
         den_2 += common_dict[i][1] ** 2
 
-    distance = (num_val) / math.sqrt(den_1 * den_2)
+    distance = (num_val) / (math.sqrt(den_1) * math.sqrt(den_2))
     return distance
 
 def word_list(input1, input2):
