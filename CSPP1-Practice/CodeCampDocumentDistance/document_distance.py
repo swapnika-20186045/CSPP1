@@ -2,22 +2,23 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import re
+import math
 
 def similarity(common_dict, dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
     num_val = 0
-    den1 = 0
-    den2 = 0
+    den_1 = 0
+    den_2 = 0
     for i in common_dict:
         num_val += common_dict[0] * common_dict[1]
     for j in dict1:
-        den1 += dict1[j] ** 2
+        den_1 += dict1[j] ** 2
     for k in dict2:
-        den2 += dict2[k] ** 2
+        den_2 += dict2[k] ** 2
 
-    return (num_val) / math.sqrt(den1*den2)
+    return (num_val) / math.sqrt(den_1*den2)
 
 def word_list(input1, input2):
     list_1 = []
@@ -73,7 +74,7 @@ def freq_count(list_1, list_2):
     for p in common_dict:
         if p not in common_dict:
             common_dict[p] = [0, freq_dict2[p]]
-    print(common_dict, freq_dict1, freq_dict2)
+    return (common_dict, freq_dict1, freq_dict2)
 
 def load_stopwords(filename):
     '''
