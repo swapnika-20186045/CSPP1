@@ -97,7 +97,7 @@ def main():
     input2 = input()
 
     (common_dict, dict_1, dict_2) = word_list(input1, input2)
-    print(similarity(common_dict, dict_1, dict_2))
+    print(similarity(common_dict))
 
 if __name__ == '__main__':
     main()
