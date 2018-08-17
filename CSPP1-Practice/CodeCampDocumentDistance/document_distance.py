@@ -20,6 +20,7 @@ def similarity(common_dict, dict1, dict2):
 
     distance = (num_val) / math.sqrt(den_1 * den_2)
     return distance
+
 def word_list(input1, input2):
     '''making a wordlist'''
     list_1 = []
@@ -76,8 +77,8 @@ def freq_count(list_1, list_2):
     for p_1 in common_dict:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_dict2[p_1]]
-    print(common_dict)
-    print(len(common_dict))
+    # print(common_dict)
+    # print(len(common_dict))
     return (common_dict, freq_dict1, freq_dict2)
 
 def load_stopwords(filename):
