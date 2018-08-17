@@ -73,7 +73,7 @@ def freq_count(list_1, list_2):
     for p in common_dict:
         if p not in common_dict:
             common_dict[p] = [0, freq_dict2[p]]
-    print(common_dict)
+    print(common_dict, freq_dict1, freq_dict2)
 
 def load_stopwords(filename):
     '''
