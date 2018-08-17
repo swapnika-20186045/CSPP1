@@ -24,14 +24,14 @@ def word_list(input1, input2):
     list_1 = []
     list_2 = []
     key_list = []
-    a = ""
-    b = ""
+    str_1 = ""
+    str_2 = ""
 
-    a = re.sub('[^A-Za-z0-9]',' ', input1.lower())
-    b = re.sub('[^A-Za-z0-9]',' ', input2.lower())
+    str_1 = re.sub('[^A-Za-z0-9]',' ', input1.lower())
+    str_2 = re.sub('[^A-Za-z0-9]',' ', input2.lower())
     
-    list_1 = a.split(" ")
-    list_2 = b.split(" ")
+    list_1 = str_1.split(" ")
+    list_2 = str_2.split(" ")
 
     stopwords = load_stopwords("stopwords.txt")
     key_list = stopwords.keys()
@@ -50,6 +50,7 @@ def word_list(input1, input2):
     # return list_1,list_2
 
 def freq_count(list_1, list_2):
+    '''frequency count in dictionaries'''
     freq_dict1 = {}
     freq_dict2 = {}
     common_dict = {}
@@ -71,9 +72,11 @@ def freq_count(list_1, list_2):
             common_dict[i] = [freq_dict1[i], freq_dict2[i]]
         else:
             common_dict[i] = [freq_dict1[i], 0]
-    for p in common_dict:
-        if p not in common_dict:
-            common_dict[p] = [0, freq_dict2[p]]
+    for p_1 in common_dict:
+        if p_1 not in common_dict:
+            common_dict[p_1] = [0, freq_dict2[p_1]]
+
+    
     return (common_dict, freq_dict1, freq_dict2)
 
 def load_stopwords(filename):
