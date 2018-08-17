@@ -79,7 +79,6 @@ def freq_count(list_1, list_2):
             freq_dict2[k] = 1
         else:
             freq_dict2[k] += 1
-    # print(freq_dict1, freq_dict2)
 
     for i in freq_dict1:
         if i in freq_dict2:
@@ -98,6 +97,10 @@ def freq_count(list_1, list_2):
             del common_dict[h_1]
     #print(common_dict)
     return common_dict
+
+def function():
+    file_name = ("stopwords.txt")
+    pass
 
 def main():
     '''
