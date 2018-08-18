@@ -49,8 +49,6 @@ def search(search_index, query):
                 q_set.add(j[0])
     return q_set
 
-
-    
 def process_queries(search_index, queries):
     '''
         function to process the search queries
@@ -69,7 +67,7 @@ def main():
 
     # read the number of search queries
     lines = int(input())
-    
+
     # read the search queries into a list
     queries = []
     for i in range(lines):
