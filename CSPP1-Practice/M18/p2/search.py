@@ -42,7 +42,7 @@ def search(search_index, query):
         if i in query :
             return search_index.index(i)
         return -1
-
+    print(search_index)
 def process_queries(search_index, queries):
     '''
         function to process the search queries
