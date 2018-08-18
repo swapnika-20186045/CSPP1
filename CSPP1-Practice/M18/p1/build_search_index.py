@@ -39,8 +39,10 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    str_1 = re.sub('[^ a-z]', '', text.lower())
+    
     list_1 = str_1.split(" ")
+    for i in list_1:
+        str_1 = re.sub('[^ a-z]', '', text.lower())
     stop_words = load_stopwords("stopwords.txt")
     for i in list_1:
         if i not in stop_words:
