@@ -51,7 +51,7 @@ def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-    a_dict = {} 
+    a_dict = {}
     # initialize a search index (an empty dictionary)
     for i in docs:
         docs_1 = word_list(i)
@@ -67,7 +67,6 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
     return a_dict
     # return search index
-    
 
 # helper function to print the search index
 # use this to verify how the search index looks
