@@ -43,8 +43,8 @@ def word_list(text):
     list_1 = str_1.split(" ")
     stop_words = load_stopwords("stopwords.txt")
     for i in list_1:
-    	if i not in stop_words:
-    		list_1.append(i)
+        if i not in stop_words:
+            list_1.append(i)
     return list_1
 
 def build_search_index(docs):
@@ -54,16 +54,16 @@ def build_search_index(docs):
     a_dict = {} 
     # initialize a search index (an empty dictionary)
     for i in docs:
-    	docs_1 = word_list(i)
+        docs_1 = word_list(i)
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
     for word in docs_1:
-    	for i in word:
-    		if i not in a_dict:
-    			for i, d in enumerate(docs_1):
+        for i in word:
+            if i not in a_dict:
+                for i, d in enumerate(docs_1):
                     if i in word:
-                    	a_dict[i] = (i, d.count(i))
+                        a_dict[i] = (i, d.count(i))
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
     return a_dict
