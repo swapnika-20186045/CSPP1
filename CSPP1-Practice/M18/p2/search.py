@@ -49,16 +49,16 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    words = []
-    for line in queries :
-            line = line.split()
-            for word in line :
-                if word not in words :
-                    words.append(word)
-                if j == -1 :
-                    search_index.append(word)
-                else :
-                    search_index[j].append()
+    # words = []
+    # for line in queries :
+    #         line = line.split()
+    #         for word in line :
+    #             if word not in words :
+    #                 words.append(word)
+    #             if j == -1 :
+    #                 search_index.append(word)
+    #             else :
+    #                 search_index[j].append()
 
 
 def main():
