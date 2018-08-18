@@ -39,25 +39,36 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    pass
+    str_1 = re.sub('[^ a-z]', '', text.lower())
+    list_1 = str_1.split(" ")
+    stop_words = load_stopwords("stopwords.txt")
+    for i in list_1:
+    	if i not in stop_words:
+    		list_1.append(i)
+    return list_1
 
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-
+    a_dict = {} 
     # initialize a search index (an empty dictionary)
-
+    for i in docs:
+    	docs_1 = word_list(i)
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-
+    for word in docs_1:
+    	for i in word:
+    		if i not in a_dict:
+    			for i, d in enumerate(docs_1):
+                    if i in word:
+                    	a_dict[i] = (i, d.count(i))
         # clean up doc and tokenize to words list
-
         # add or update the words of the doc to the search index
-
+    return a_dict
     # return search index
-    pass
+    
 
 # helper function to print the search index
 # use this to verify how the search index looks
@@ -75,7 +86,6 @@ def main():
         main function
     '''
     # empty document list
-    keys = []
     documents = []
     # iterate for n times
     lines = int(input())
@@ -83,9 +93,8 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    print_index = print_search_index(keys)
     # call print to display the search index
-    print_index(build_search_index(documents))
-    print(documents)
+    print_search_index(build_search_index(documents))
+    # print(documents)
 if __name__ == '__main__':
     main()
