@@ -66,7 +66,7 @@ def build_search_index(docs):
             if i not in a_dict:
                 for j, d in enumerate(docs_1):
                     if i in d:
-                        a_dict[i] = (j, d.(i))
+                        a_dict[i] = (j, d.count(i))
                  
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
