@@ -44,7 +44,7 @@ def word_list(text):
     stop_words = load_stopwords("stopwords.txt")
     for i in list_1:
         if i not in stop_words:
-            list_1.append(i)
+            list_1 = i
     return list_1
 
 def build_search_index(docs):
@@ -72,7 +72,7 @@ def build_search_index(docs):
 
 # helper function to print the search index
 # use this to verify how the search index looks
-def print_search_index(index, keys):
+def print_search_index(index):
     '''
         print the search index
     '''
