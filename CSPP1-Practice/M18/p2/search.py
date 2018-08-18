@@ -29,12 +29,6 @@
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
 
-def ListNode(self, w, docslist) :
-
-        self.word = w
-        self.docslist = []
-        self.docslist.append()
-
 def search(search_index, query):
     '''
         function to search through the search index and return the results
@@ -45,7 +39,7 @@ def search(search_index, query):
     '''
     search_index  = []
     for i in search_index :
-        if i.query == query :
+        if i in query :
             return search_index.index(i)
         return -1
 
@@ -55,9 +49,8 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    for d in queries :
-        words = []
-        for line in d :
+    words = []
+    for line in queries :
             line = line.split()
             for word in line :
                 if word not in words :
