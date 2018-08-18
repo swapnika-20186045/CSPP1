@@ -63,7 +63,7 @@ def main():
         main function
     '''
     # This line loads the search index
-    search_index = setattr(input())
+    search_index = getattr(input())
 
     # read the number of search queries
     lines = int(input())
