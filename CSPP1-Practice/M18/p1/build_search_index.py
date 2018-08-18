@@ -57,7 +57,7 @@ def build_search_index(docs):
     a_dict = {}
     # initialize a search index (an empty dictionary)
     for i in docs:
-        docs_1 = word_list(i)
+        docs_1.append(word_list(i))
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
