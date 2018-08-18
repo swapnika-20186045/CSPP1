@@ -82,9 +82,9 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-
+    print_index = print_search_index(index, keys)
     # call print to display the search index
-    print_search_index(build_search_index(documents))
+    print_index(build_search_index(documents))
     print(documents)
 if __name__ == '__main__':
     main()
