@@ -79,6 +79,6 @@ def main():
 
     # call process queries
     process_queries(search_index, queries)
-    search(search_index, query)
+    search(search_index, queries)
 if __name__ == '__main__':
     main()
