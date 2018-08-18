@@ -55,14 +55,10 @@ def process_queries(search_index, queries):
             for word in line :
                 if word not in words :
                     words.append(word)
-
-            for word in words :
-                node = ListNode(word)
-                j = Search(word, search_index)
                 if j == -1 :
-                    search_index.append(node)
+                    search_index.append(word)
                 else :
-                    search_index[j].docslist.append( )
+                    search_index[j].append()
 
 
 def main():
