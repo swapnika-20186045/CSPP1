@@ -75,6 +75,7 @@ def main():
         main function
     '''
     # empty document list
+    keys = []
     documents = []
     # iterate for n times
     lines = int(input())
