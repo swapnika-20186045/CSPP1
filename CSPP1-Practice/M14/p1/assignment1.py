@@ -115,13 +115,13 @@ class Message(object):
         shift_dict = {}
         i = 0
         while i <= 255:
-            if 65<=i<=91-shift:
+            if 65 <= i <= 91-shift:
                 shift_dict[chr(i)] = chr(i+shift)
-            elif 91-shift<=i<=91:
+            elif 91-shift < i <= 91:
                 shift_dict[chr(i)] = chr(i+shift-26)
-            elif 97<=i<=123-shift:
+            elif 97 <= i <= 123-shift:
                 shift_dict[chr(i)] = chr(i+shift)
-            elif 123-shift<=i<=123:
+            elif 123-shift < i <= 123:
                 shift_dict[chr(i)] = chr(i+shift-26)
             else:
                 shift_dict[chr(i)] = chr(i)
@@ -137,7 +137,7 @@ class Message(object):
         alphabet by some number of characters determined by the input shift
 
         shift (integer): the shift with which to encrypt the message.
-        0 <= shift < 26
+        0  <=  shift < 26
 
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
