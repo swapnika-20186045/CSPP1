@@ -116,15 +116,15 @@ class Message(object):
         i = 0
         while i <= 255:
             if 65<=i<=91-shift:
-                d[chr(i)] = chr(i+shift)
+                shift_dict[chr(i)] = chr(i+shift)
             elif 91-shift<=i<=91:
-                d[chr(i)] = chr(i+shift-26)
+                shift_dict[chr(i)] = chr(i+shift-26)
             elif 97<=i<=123-shift:
-                d[chr(i)] = chr(i+shift)
+                shift_dict[chr(i)] = chr(i+shift)
             elif 123-shift<=i<=123:
-                d[chr(i)] = chr(i+shift-26)
+                shift_dict[chr(i)] = chr(i+shift-26)
             else:
-                d[chr(i)] = chr(i)
+                shift_dict[chr(i)] = chr(i)
             i += 1
 
         return shift_dict
