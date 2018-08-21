@@ -102,7 +102,7 @@ class Message(object):
                 d[chr(i)] = chr(i)
             i += 1
 
-        return shift_dict
+        return d
         # pass #delete this line and replace with your code here
 
     def apply_shift(self, shift):
