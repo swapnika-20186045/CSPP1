@@ -39,7 +39,7 @@ def load_words(file_name):
 WORDLIST_FILENAME = 'words.txt'
 
 ### Paste your implementation of the `PlaintextMessage` class here
-class Message(object):
+class Message():
     '''### DO NOT MODIFY THIS METHOD ###'''
     def __init__(self, text):
         '''
@@ -120,7 +120,7 @@ class Message(object):
 
 
 ### Helper code End
-class PlaintextMessage(object):
+class PlaintextMessage():
     '''PlaintextMessage'''
     def __init__(self, text, shift):
         '''
