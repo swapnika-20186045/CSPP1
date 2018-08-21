@@ -113,7 +113,7 @@ class Message(object):
                  another letter (string).
         '''
         shift_dict = {}
-
+        i = 0
         while i <= 255:
             if 65<=i<=91-shift:
                 d[chr(i)] = chr(i+shift)
