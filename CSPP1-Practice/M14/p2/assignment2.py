@@ -86,23 +86,14 @@ class Message(object):
         Returns: a dictionary mapping a letter (string) to
                  another letter (string).
         '''
-        d = {}
-        i = 0
+        shift_dict = {}
 
-        while i <= 255:
-            if 65<=i<=91-shift:
-                d[chr(i)] = chr(i+shift)
-            elif 91-shift<=i<=91:
-                d[chr(i)] = chr(i+shift-26)
-            elif 97<=i<=123-shift:
-                d[chr(i)] = chr(i+shift)
-            elif 123-shift<=i<=123:
-                d[chr(i)] = chr(i+shift-26)
-            else:
-                d[chr(i)] = chr(i)
-            i += 1
+        for i in range(97, 123, 1):
+            shift_dict[chr(i)] = chr(97+(i-97+shift)%26)
+        for i in range(65, 91, 1):
+            shift_dict[chr(i)] = chr(65+(i-65+shift)%26)
 
-        return d
+        return shift_dict
         # pass #delete this line and replace with your code here
 
     def apply_shift(self, shift):
