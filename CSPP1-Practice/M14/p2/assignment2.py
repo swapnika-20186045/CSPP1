@@ -86,7 +86,7 @@ class Message(object):
         Returns: a dictionary mapping a letter (string) to
                  another letter (string).
         '''
-        shift_dict = {}
+        d = {}
         i = 0
 
         while i <= 255:
