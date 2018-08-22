@@ -141,7 +141,8 @@ class Message(object):
                 continue
             else:
                 new_msg.append(self.build_shift_dict(shift)[i])
-        return ''.join(new_msg)
+        self.message_text = ''.join(new_msg)
+        return self.message_text
 
 class PlaintextMessage(Message):
     ''' PlaintextMessage class '''
