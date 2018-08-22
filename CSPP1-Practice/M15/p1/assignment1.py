@@ -222,7 +222,7 @@ class CiphertextMessage(Message):
     def __init__(self, text):
         '''
         Initializes a CiphertextMessage object
-                
+
         text (string): the message's text
 
         a CiphertextMessage object has two attributes:
@@ -256,10 +256,11 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
         decrypted_messages = []
-        for each_shift in range(27):
+        for _ in range(27):
             decrypted_messages.append(self.apply_shift(1))
-        return (24 - decrypted_messages.index(max(decrypted_messages, key = self.no_of_valid_words))+1,\
-        	   max(decrypted_messages, key = self.no_of_valid_words))
+        return (24 - decrypted_messages.index(max(decrypted_messages,\
+               key = self.no_of_valid_words))+1, max(decrypted_messages,\
+               key = self.no_of_valid_words))
 
 
 ### DO NOT MODIFY THIS METHOD ###
