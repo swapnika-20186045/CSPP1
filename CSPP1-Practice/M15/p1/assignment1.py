@@ -233,6 +233,7 @@ class CiphertextMessage(Message):
         Message.__init__(self, text)
 
     def no_of_valid_words(self, decrypted_message_text):
+        '''count the no. of valid words'''
         valid_words_count = 0
         for each_word in decrypted_message_text.split(' '):
             if is_word(self.valid_words, each_word):
