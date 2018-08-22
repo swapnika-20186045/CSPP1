@@ -258,7 +258,7 @@ class CiphertextMessage(Message):
         decrypted_messages = []
         for each_shift in range(27):
             decrypted_messages.append(self.apply_shift(1))
-        return (decrypted_messages.index(max(decrypted_messages, key = self.no_of_valid_words))+1,\
+        return (26 - decrypted_messages.index(max(decrypted_messages, key = self.no_of_valid_words))+1,\
         	   max(decrypted_messages, key = self.no_of_valid_words))
 
 
