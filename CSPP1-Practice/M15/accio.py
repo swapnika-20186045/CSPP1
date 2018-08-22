@@ -17,8 +17,9 @@ class Accio(Spell):
     def __init__(self):
         Spell.__init__(self, 'Accio', 'Summoning Charm')
 
-    def __str__(self):
-        return self.name + ' ' + self.incantation
+    def getDescription(self):
+        return 'This charm summons an object to the caster, potentially over a significant distance. '
+
 class Confundo(Spell):
     def __init__(self):
         Spell.__init__(self, 'Confundo', 'Confundus Charm')
@@ -29,12 +30,7 @@ class Confundo(Spell):
 def studySpell(spell):
     print(spell)
 
-def main():
-    spell = Accio()
-    # spell.execute()
-    # studySpell(spell)
-    # studySpell(Confundo())  
-    print(Accio())
-
-if __name__ == "__main__":
-    main()
+spell = Accio()
+# spell.execute()
+# studySpell(Confundo())  
+studySpell(spell)
