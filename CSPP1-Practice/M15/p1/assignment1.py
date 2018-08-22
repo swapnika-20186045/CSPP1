@@ -259,8 +259,8 @@ class CiphertextMessage(Message):
         for _ in range(27):
             decrypted_messages.append(self.apply_shift(1))
         return (24 - decrypted_messages.index(max(decrypted_messages,\
-               key = self.no_of_valid_words))+1, max(decrypted_messages,\
-               key = self.no_of_valid_words))
+               key=self.no_of_valid_words))+1, max(decrypted_messages,\
+               key=self.no_of_valid_words))
 
 
 ### DO NOT MODIFY THIS METHOD ###
@@ -271,4 +271,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
