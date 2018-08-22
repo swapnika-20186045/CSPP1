@@ -231,12 +231,12 @@ class CiphertextMessage(Message):
         # pass #delete this line and replace with your code here
         Message.__init__(self, text)
 
-    def no_of_words(self, decrypted_message_text):
-        count = 0
-        for i in decrypted_message_text.split(' '):
-            if is_word(self.valid_words, i):
-                count += 1
-        return count
+    def no_of_valid_words(self, decrypted_message_text):
+        valid_words_count = 0
+        for each_word in decrypted_message_text.split(' '):
+            if is_word(self.valid_words, each_word):
+                valid_words_count += 1
+        return valid_words_count
 
     def decrypt_message(self):
         '''
@@ -255,10 +255,10 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
         decrypted_messages = []
-        for i in range(27):
+        for each_shift in range(27):
             decrypted_messages.append(self.apply_shift(1))
-        return (decrypted_messages.index(max(decrypted_messages, key = self.no_of_words))+1,\
-        	   max(decrypted_messages, key = self.no_of_words))
+        return (decrypted_messages.index(max(decrypted_messages, key = self.no_of_valid_words))+1,\
+        	   max(decrypted_messages, key = self.no_of_valid_words))
 
 
 ### DO NOT MODIFY THIS METHOD ###
