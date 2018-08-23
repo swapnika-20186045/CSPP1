@@ -1,5 +1,5 @@
 '''matrix operations'''
-def mult_matrix(m1, m2, n_1, m_1, n_2, m_2):
+def mult_matrix(m_1, m_2, n, m, a, b):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -7,21 +7,20 @@ def mult_matrix(m1, m2, n_1, m_1, n_2, m_2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if m_1 == n_2:
+    if m == a:
         mul = []
-        for i in range(0, n_1):
+        for i in range(0, n):
             mat = []
-            for j in range(0, n_1):
+            for j in range(0, n):
                 sum_val = 0
-                for n_2 in range(0, m_1):
-                    sum_val = sum_val + (m1[i][n_2] * m2[n_2][j])
+                for a in range(0, m):
+                    sum_val = sum_val + (m1[i][a] * m2[a][j])
                 mat.append(sum_val)
             mul.append(mat)
         return mul
-    else:
-        print("Error: Matrix shapes invalid for mult")
+    print("Error: Matrix shapes invalid for mult")
 
-def add_matrix(m1, m2, n_1, m_1, n_2, m_2):
+def add_matrix(m_1, m_2, n, m, a, b):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -29,11 +28,11 @@ def add_matrix(m1, m2, n_1, m_1, n_2, m_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if n_1 == n_2 and m_1 == m_2:
+    if n == a and m == b:
         add = []
-        for i in range(0, n_1):
+        for i in range(0, n):
             mat = []
-            for j in range(0, m_1):
+            for j in range(0, m):
                 mat.append(m1[i][j] + m2[i][j])
             add.append(mat)
         return add
@@ -47,12 +46,12 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    n_1, m_1 = input().split(',')
-    m_1 = int(m_1)
-    n_1 = int(n_1)
+    n, m = input().split(',')
+    m = int(m)
+    n = int(n)
     matrix1 = []
     matrix2 = []
-    for i in range(0, n_1):
+    for i in range(0, n):
         matrix1.append(list(map(int, input().split())))
     # print(matrix1)
     # n,m = input().split(',')
@@ -65,15 +64,15 @@ def read_matrix():
         count = 0
         for _ in i:
             count += 1
-        if count != m_1:
+        if count != m:
             flag = False
     if flag == False:
         print("Error: Invalid input for the matrix")
 
-    n_2, m_2 = input().split(',')
-    m_2 = int(m_2)
-    n_2 = int(n_2)
-    for i in range(0, n_2):
+    a, b = input().split(',')
+    b = int(m_2)
+    a = int(a)
+    for i in range(0, a):
         matrix2.append(list(map(int, input().split())))
 
     flag = True
@@ -81,13 +80,13 @@ def read_matrix():
         count = 0
         for j in i:
             count += 1
-        if count != m_2:
+        if count != b:
             flag = False
     if flag == False:
         print("Error: Invalid input for the matrix")
     if flag == True:
-        print(add_matrix(matrix1, matrix2, n_1, m_1, n_2, m_2))
-        print(mult_matrix(matrix1, matrix2, n_1, m_1, n_2, m_2))
+        print(add_matrix(matrix1, matrix2, n, m, a, b))
+        print(mult_matrix(matrix1, matrix2, n, m, a, b))
 
 def main():
     '''main function'''
