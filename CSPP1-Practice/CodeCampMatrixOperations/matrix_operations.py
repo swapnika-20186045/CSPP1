@@ -1,5 +1,5 @@
 '''matrix operations'''
-def mult_matrix(m1, m2, n_1, m_1, n_2):
+def mult_matrix(m1, m2, n_1, m_1, n_2, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -86,7 +86,7 @@ def read_matrix():
     if flag == False:
         print("Error: Invalid input for the matrix")
     if flag == True:
-        print(add_matrix(matrix1, matrix2, n_1, m_1, n_2))
+        print(add_matrix(matrix1, matrix2, n_1, m_1, n_2, m_2))
         print(mult_matrix(matrix1, matrix2, n_1, m_1, n_2, m_2))
 
 def main():
