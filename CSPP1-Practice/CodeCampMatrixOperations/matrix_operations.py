@@ -40,7 +40,7 @@ def read_matrix():
     n,m = input().split(',')
     n = int(n)
     matrix2 = []
-    for j in range(0, n):
+    for i in range(0, n):
         matrix2.append(list(map(int, input().split())))
 
 def main():
