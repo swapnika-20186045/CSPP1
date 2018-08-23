@@ -16,6 +16,7 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
+    add =[]
     for i in range(0, n):
         mat = []
         for j in range(0, n):
