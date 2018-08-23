@@ -82,7 +82,7 @@ def read_matrix():
             count += 1
         if count != columns_2:
             flag = False
-    if flag is not True: 
+    if flag is not True:
         print("Error: Invalid input for the matrix")
     if flag is True:
         print(add_matrix(matrix1, matrix2, rows_1, columns_1, rows_2, columns_2))
