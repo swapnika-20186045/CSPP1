@@ -66,7 +66,7 @@ def read_matrix():
             count += 1
         if count != m:
             flag = False
-    if flag != False:
+    if flag == False:
         print("Error: Invalid input for the matrix")
 
     a, b = input().split(',')
@@ -78,7 +78,7 @@ def read_matrix():
     flag = True
     for i in matrix2:
         count = 0
-        for j in i:
+        for _ in i:
             count += 1
         if count != b:
             flag = False
