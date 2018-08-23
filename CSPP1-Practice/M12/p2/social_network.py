@@ -59,9 +59,9 @@ def delete_person(network, arg1):
     '''
     # if not valid(arg1) or not valid(arg2):
     #     print("user not found!!")
-    for i in network:
-        if arg1 in network[i]:
-            network[i].remove(arg1)
+    for person in network:
+        if arg1 in network[person]:
+            network[person].remove(arg1)
     if arg1 in network:
         network.pop(arg1)
     return network
