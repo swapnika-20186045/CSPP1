@@ -41,7 +41,7 @@ def read_matrix():
     a,b = input().split(',')
     a = int(a)
     matrix2 = []
-    for i in range(0, a):
+    for j in range(0, a):
         matrix2.append(list(map(int, input().split())))
 
 def main():
