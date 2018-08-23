@@ -51,8 +51,8 @@ def read_matrix():
     matrix2 = []
     for i in range(0, n):
         matrix2.append(list(map(int, input().split())))
-    return add_matrix(matrix1, matrix2, n)
-    return mult_matrix(matrix1, matrix2, n)
+    print(add_matrix(matrix1, matrix2, n))
+    print(mult_matrix(matrix1, matrix2, n))
 def main():
     # read matrix 1
 
