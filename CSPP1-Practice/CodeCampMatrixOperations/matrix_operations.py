@@ -1,3 +1,4 @@
+'''matrix operations'''
 def mult_matrix(m1, m2, n_1, m_1, n_2, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -36,8 +37,7 @@ def add_matrix(m1, m2, n_1, m_1, n_2, m_2):
                 mat.append(m1[i][j] + m2[i][j])
             add.append(mat)
         return add
-    else:
-        print("Error: Matrix shapes invalid for addition")
+    print("Error: Matrix shapes invalid for addition")
 
 def read_matrix():
     '''
@@ -95,7 +95,7 @@ def main():
     # read matrix 2
 
     # add matrix 1 and matrix 2
-    
+
     # multiply matrix 1 and matrix 2
     read_matrix()
     # print(add_matrix())
