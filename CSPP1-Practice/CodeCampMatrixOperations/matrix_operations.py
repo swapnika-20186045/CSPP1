@@ -66,7 +66,7 @@ def read_matrix():
             count += 1
         if count != m:
             flag = False
-    if flag == False:
+    if flag != False:
         print("Error: Invalid input for the matrix")
 
     a, b = input().split(',')
