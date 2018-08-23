@@ -12,7 +12,7 @@ def mult_matrix(m1, m2, n):
         for j in range(0, n):
             sum_val = 0
             for k in range(0, n):
-                sum_val = sum_val + (m1[i][k] + m2[k][j])
+                sum_val = sum_val + (m1[i][k] * m2[k][j])
             mat.append(sum_val)
         mul.append(mat)
     return mul
