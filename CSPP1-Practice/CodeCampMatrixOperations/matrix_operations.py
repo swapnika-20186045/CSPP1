@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2):
+def mult_matrix(m1, m2, n):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -52,6 +52,7 @@ def read_matrix():
     for i in range(0, n):
         matrix2.append(list(map(int, input().split())))
     return add_matrix(matrix1, matrix2, n)
+    return mult_matrix(matrix1, matrix2, n)
 def main():
     # read matrix 1
 
