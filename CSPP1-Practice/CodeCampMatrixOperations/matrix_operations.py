@@ -14,7 +14,7 @@ def mult_matrix(m_1, m_2, n, m, a, b):
             for j in range(0, n):
                 sum_val = 0
                 for a in range(0, m):
-                    sum_val = sum_val + (m1[i][a] * m2[a][j])
+                    sum_val = sum_val + (m_1[i][a] * m_2[a][j])
                 mat.append(sum_val)
             mul.append(mat)
         return mul
@@ -33,7 +33,7 @@ def add_matrix(m_1, m_2, n, m, a, b):
         for i in range(0, n):
             mat = []
             for j in range(0, m):
-                mat.append(m1[i][j] + m2[i][j])
+                mat.append(m_1[i][j] + m_2[i][j])
             add.append(mat)
         return add
     print("Error: Matrix shapes invalid for addition")
