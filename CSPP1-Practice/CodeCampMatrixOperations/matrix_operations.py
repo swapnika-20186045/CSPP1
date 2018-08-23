@@ -19,7 +19,7 @@ def add_matrix(m1, m2):
     add =[]
     for i in range(0, n):
         mat = []
-        for j in range(0, a):
+        for j in range(0, n):
             mat.append(m1[i][j] + m2[i][j])
         add.append(mat)
     return add
