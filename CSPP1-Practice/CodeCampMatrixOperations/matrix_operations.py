@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2, n):
+def mult_matrix(m1, m2, n, m):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -6,18 +6,19 @@ def mult_matrix(m1, m2, n):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
+
     mul = []
     for i in range(0, n):
         mat = []
         for j in range(0, n):
             sum_val = 0
-            for k in range(0, n):
+            for k in range(0, m):
                 sum_val = sum_val + (m1[i][k] * m2[k][j])
             mat.append(sum_val)
         mul.append(mat)
     return mul
 
-def add_matrix(m1, m2, n):
+def add_matrix(m1, m2, n, m):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -28,7 +29,7 @@ def add_matrix(m1, m2, n):
     add = []
     for i in range(0, n):
         mat = []
-        for j in range(0, n):
+        for j in range(0, m):
             mat.append(m1[i][j] + m2[i][j])
         add.append(mat)
     return add
@@ -42,6 +43,7 @@ def read_matrix():
         error message should be "Error: Invalid input for the matrix"
     '''
     n,m = input().split(',')
+    m = int(m)
     n = int(n)
     matrix1 = []
     matrix2 = []
@@ -52,8 +54,28 @@ def read_matrix():
     n = int(n)
     for i in range(0, n):
         matrix2.append(list(map(int,input().split())))
-    return add_matrix(matrix1, matrix2, n)
-    return mult_matrix(matrix1, matrix2, n)
+
+    flag = True
+    for i in matrix1:
+        count = 0
+        for j in i:
+            count += 1
+        if count != m:
+            flag = False
+    if flag == False:
+        print("Error: Invalid input for the matrix")
+    flag = True
+    for i in matrix2:
+        count = 0
+        for j in i:
+            count += 1
+        if count != m:
+            flag = False
+    if flag == False:
+        print("Error: Invalid input for the matrix")
+    if flag == True:
+        print(add_matrix(matrix1, matrix2, n, m))
+        print(mult_matrix(matrix1, matrix2, n, m))
 
 def main():
     # read matrix 1
@@ -63,7 +85,7 @@ def main():
     # add matrix 1 and matrix 2
     
     # multiply matrix 1 and matrix 2
-    print(read_matrix())
+    read_matrix()
     # print(add_matrix())
     # print(mult_matrix())
 
