@@ -30,7 +30,6 @@ def follow(network, arg1, arg2):
     else:
         network[arg1] = [arg2]
     return network
-    return arg1 + " is followed by " +arg2
 
 def unfollow(network, arg1, arg2):
     '''
@@ -66,7 +65,6 @@ def delete_person(network, arg1):
     if arg1 in network:
         network.pop(arg1)
     return network
-    return "arg1 deleted from everyone's friendlist"
 
 def main():
     '''
@@ -88,5 +86,5 @@ def main():
     print(network)
 
 if __name__ == "__main__":
-    adict = {}
+    a_dict = {}
     main()
