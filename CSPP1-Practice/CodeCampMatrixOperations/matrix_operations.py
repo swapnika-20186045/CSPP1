@@ -8,7 +8,7 @@ def mult_matrix(m1, m2):
     '''
     pass
 
-def add_matrix(m1, m2, n):
+def add_matrix(m1, m2, n, a):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -19,7 +19,7 @@ def add_matrix(m1, m2, n):
     add =[]
     for i in range(0, n):
         mat = []
-        for j in range(0, n):
+        for j in range(0, a):
             mat.append(m1[i][j] + m2[i][j])
         add.append(mat)
     return add
@@ -53,7 +53,7 @@ def main():
     
     # multiply matrix 1 and matrix 2
     print(read_matrix())
-    print(add_matrix(matrix1, matrix2, n))
+    print(add_matrix(matrix1, matrix2, n, a))
 
 if __name__ == '__main__':
     main()
