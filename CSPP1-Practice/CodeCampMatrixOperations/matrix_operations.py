@@ -70,7 +70,7 @@ def read_matrix():
         print("Error: Invalid input for the matrix")
 
     a, b = input().split(',')
-    b = int(m_2)
+    b = int(b)
     a = int(a)
     for i in range(0, a):
         matrix2.append(list(map(int, input().split())))
