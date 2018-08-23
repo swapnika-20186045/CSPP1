@@ -44,11 +44,11 @@ def read_matrix():
     n,m = input().split(',')
     n = int(n)
     matrix1 = []
+    matrix2 = []
     for i in range(0, n):
         matrix1.append(list(map(int, input().split())))
     n,m = input().split(',')
     n = int(n)
-    matrix2 = []
     for i in range(0, n):
         matrix2.append(list(map(int, input().split())))
     print(add_matrix(matrix1, matrix2, n))
