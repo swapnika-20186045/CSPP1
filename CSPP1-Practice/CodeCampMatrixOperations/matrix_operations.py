@@ -66,7 +66,7 @@ def read_matrix():
             count += 1
         if count != columns_1:
             flag = False
-    if flag == False:
+    if flag != True:
         print("Error: Invalid input for the matrix")
 
     rows_2, columns_2 = input().split(',')
@@ -82,7 +82,7 @@ def read_matrix():
             count += 1
         if count != columns_2:
             flag = False
-    if flag == False:
+    if flag != True: 
         print("Error: Invalid input for the matrix")
     if flag == True:
         print(add_matrix(matrix1, matrix2, rows_1, columns_1, rows_2, columns_2))
