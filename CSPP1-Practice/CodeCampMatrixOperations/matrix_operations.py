@@ -34,15 +34,15 @@ def read_matrix():
     '''
     n,m = input().split(',')
     n = int(n)
-    matrix1 = []
+    m1 = []
     for i in range(0, n):
-        matrix1.append(list(map(int, input().split())))
+        m1.append(list(map(int, input().split())))
     
     a,b = input().split(',')
     a = int(a)
-    matrix2 = []
+    m2 = []
     for j in range(0, a):
-        matrix2.append(list(map(int, input().split())))
+        m2.append(list(map(int, input().split())))
 
 def main():
     # read matrix 1
