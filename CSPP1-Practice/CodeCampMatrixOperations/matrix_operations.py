@@ -17,7 +17,7 @@ def mult_matrix(m_1, m_2, rows_1, columns_1, rows_2, columns_2):
                     sum_val = sum_val + (m_1[i][k] * m_2[k][j])
                 mat.append(sum_val)
             mul.append(mat)
-    return mul
+        return mul
     print("Error: Matrix shapes invalid for mult")
 
 def add_matrix(m_1, m_2, rows_1, columns_1, rows_2, columns_2):
