@@ -86,5 +86,4 @@ def main():
     print(network)
 
 if __name__ == "__main__":
-    a_dict = {}
     main()
