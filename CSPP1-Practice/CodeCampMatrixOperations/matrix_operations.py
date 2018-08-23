@@ -16,12 +16,12 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    # for i in range(0, n):
-    #     mat = []
-    #     for j in range(0, n):
-    #         mat.append(m1[i][j] + m2[i][j])
-    #     add.append(mat)
-    # return add
+    for i in range(0, n):
+        mat = []
+        for j in range(0, n):
+            mat.append(m1[i][j] + m2[i][j])
+        add.append(mat)
+    return add
 
 def read_matrix():
     '''
