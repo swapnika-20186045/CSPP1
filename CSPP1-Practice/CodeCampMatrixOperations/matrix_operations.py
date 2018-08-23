@@ -37,14 +37,12 @@ def read_matrix():
     matrix1 = []
     for i in range(0, n):
         matrix1.append(list(map(int, input().split())))
-        print(matrix1)
     
     a,b = input().split(',')
     a = int(a)
     matrix2 = []
     for i in range(0, a):
         matrix2.append(list(map(int, input().split())))
-        print(matrix2)
 
 def main():
     # read matrix 1
