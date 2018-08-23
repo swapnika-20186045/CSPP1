@@ -62,8 +62,8 @@ def main():
     
     # multiply matrix 1 and matrix 2
     print(read_matrix())
-    print(add_matrix(matrix1, matrix2, n))
-    print(mult_matrix(matrix1, matrix2, n))
+    print(add_matrix())
+    print(mult_matrix())
 
 if __name__ == '__main__':
     main()
