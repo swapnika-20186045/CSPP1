@@ -16,7 +16,12 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    pass
+    # for i in range(0, n):
+    #     mat = []
+    #     for j in range(0, n):
+    #         mat.append(m1[i][j] + m2[i][j])
+    #     add.append(mat)
+    # return add
 
 def read_matrix():
     '''
@@ -26,7 +31,19 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    pass
+    n,m = input().split(',')
+    n = int(n)
+    matrix1 = []
+    for i in range(0, n):
+        matrix1.append(list(map(int, input().split())))
+        print(matrix1)
+    
+    a,b = input().split(',')
+    a = int(a)
+    matrix2 = []
+    for i in range(0, a):
+        matrix2.append(list(map(int, input().split())))
+        print(matrix2)
 
 def main():
     # read matrix 1
@@ -36,7 +53,7 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    pass
+    print(read_matrix())
 
 if __name__ == '__main__':
     main()
