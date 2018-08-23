@@ -47,13 +47,13 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    n_1,m_1 = input().split(',')
+    n_1, m_1 = input().split(',')
     m_1 = int(m_1)
     n_1 = int(n_1)
     matrix1 = []
     matrix2 = []
     for i in range(0, n_1):
-        matrix1.append(list(map(int,input().split())))
+        matrix1.append(list(map(int, input().split())))
     # print(matrix1)
     # n,m = input().split(',')
     # n = int(n)
@@ -70,11 +70,11 @@ def read_matrix():
     if flag == False:
         print("Error: Invalid input for the matrix")
 
-    n_2,m_2 = input().split(',')
+    n_2, m_2 = input().split(',')
     m_2 = int(m_2)
     n_2 = int(n_2)
     for i in range(0, n_2):
-        matrix2.append(list(map(int,input().split())))
+        matrix2.append(list(map(int, input().split())))
 
     flag = True
     for i in matrix2:
