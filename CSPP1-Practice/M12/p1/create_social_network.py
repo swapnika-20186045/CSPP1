@@ -35,11 +35,20 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
 
-    dictionary = {}
-    for i in range(0, len(data), 2):
-        if data[i] in dictionary:
-            dictionary[data[i]] = dictionary[data[i+1]].split(',')
-    return dictionary
+    a_dict = {}
+    list_1 []
+    for i in data:
+        if "follows" in i:
+            list_1 = i.split("follows")
+            if list_1[0] in a_dict:
+                list_1[1] = list_1[1].split(',')
+                a_dict[list_1[0]] = list_1[1]
+            else:
+                list_1[1] = list_1[1].split(',')
+                a_dict[list_1[0]] = list_1[1]
+        else:
+            return a_dict
+    return a_dict
 
 def main():
     '''
@@ -48,10 +57,11 @@ def main():
     string = ''
     lines = int(input())
     for i in range(lines):
-        i += 1
         string += input()
-        string += '\n'
-
+        if i != (lines - 1):
+            string += '\n'
+        i += 1
+    string = string.split('\n')
     print(create_social_network(string))
 
 if __name__ == "__main__":
