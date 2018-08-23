@@ -47,13 +47,14 @@ def read_matrix():
     matrix2 = []
     for i in range(0, n):
         matrix1.append(list(map(int,input().split())))
-    print(matrix1)
+    # print(matrix1)
     n,m = input().split(',')
     n = int(n)
     for i in range(0, n):
         matrix2.append(list(map(int,input().split())))
     return add_matrix(matrix1, matrix2, n)
     return mult_matrix(matrix1, matrix2, n)
+
 def main():
     # read matrix 1
 
@@ -63,8 +64,8 @@ def main():
     
     # multiply matrix 1 and matrix 2
     print(read_matrix())
-    print(add_matrix())
-    print(mult_matrix())
+    # print(add_matrix())
+    # print(mult_matrix())
 
 if __name__ == '__main__':
     main()
