@@ -47,6 +47,7 @@ def read_matrix():
     matrix2 = []
     for i in range(0, n):
         matrix1.append(list(map(int,input().split())))
+    print(matrix1)
     n,m = input().split(',')
     n = int(n)
     for i in range(0, n):
