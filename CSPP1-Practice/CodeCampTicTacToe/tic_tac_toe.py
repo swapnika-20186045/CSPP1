@@ -1,4 +1,5 @@
 def is_horizontal(main_list, turn):
+    '''to check the game horizontally'''
     count = 0
     for lo_op in range(3):
         for in_loop in range(3):
@@ -10,6 +11,7 @@ def is_horizontal(main_list, turn):
     return False
 
 def is_vertical(main_list, turn):
+    '''to check the game vertically'''
     count = 0
     for lo_op in range(3):
         for in_loop in range(3):
@@ -21,6 +23,7 @@ def is_vertical(main_list, turn):
     return False
 
 def is_diagonal_forward(main_list, turn):
+    '''to check forward diagonal in the game'''
     count = 0
     for lo_op in range(3):
         if turn not in main_list[lo_op][lo_op]:
@@ -30,7 +33,7 @@ def is_diagonal_forward(main_list, turn):
     return False
 
 def is_diagonal_backward(main_list, turn):
-    '''Checks for diagnol backward match'''
+    '''to check backward diagonal in the game'''
     count = 0
     in_loop = 2
     for lo_op in range(3):
@@ -42,6 +45,7 @@ def is_diagonal_backward(main_list, turn):
     return False
 
 def read_input():
+    '''to read the input'''
     list_1 = []
     for _ in range(3):
         list_1.append(list(map(str, input().split())))
