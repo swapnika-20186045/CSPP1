@@ -14,6 +14,7 @@ def is_valid(board):
     return True
 
 def check_game(board):
+    count = 0
     for i in range(len(board)):
         if board[i][0] == board[i][1] and board[i][1] == board[i][2]:
             count += 1
