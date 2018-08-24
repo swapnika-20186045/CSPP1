@@ -26,7 +26,7 @@ def is_diagonal_forward(main_list, turn):
         if turn not in main_list[lo_op][lo_op]:
             count += 1
     if count == 0:
-            return True
+        return True
     return False
 
 def is_diagonal_backward(main_list, turn):
@@ -49,7 +49,7 @@ def main():
     char_count = 0
     other_char = 0
     main_list = []
-    for i in range(3):
+    for _ in range(3):
         main_list.append(list(map(str, input().split())))
 
     for lo_op in range(3):
