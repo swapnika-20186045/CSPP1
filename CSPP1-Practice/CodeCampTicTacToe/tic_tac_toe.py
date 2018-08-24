@@ -27,7 +27,6 @@ def is_diagonal_forward(main_list, turn):
             count += 1
     if count == 0:
             return True
-        count = 0
     return False                    
 
 def is_diagonal_backward(main_list, turn):
