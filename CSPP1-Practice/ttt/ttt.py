@@ -89,7 +89,7 @@ def main():
 
     for _ in range(3):
         board.append(input().split())
-    if is_valid(board):
+    if is_valid(board) and check_game(board):
         print(check_winner(board))
 
 main()
