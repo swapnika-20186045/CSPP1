@@ -11,8 +11,8 @@ def is_horizontal(main_list, turn):
 
 def is_vertical(main_list, turn):
     count = 0
-    for in_loop in range(3):
-        for lo_op in range(3):
+    for loop in range(3):
+        for in_loop in range(3):
             if turn not in main_list[in_loop][lo_op]:
                 count += 1
         if count == 0:
