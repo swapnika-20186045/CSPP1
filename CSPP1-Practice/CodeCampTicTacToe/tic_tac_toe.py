@@ -1,3 +1,7 @@
+'''tic-tac-toe'''
+
+'''Author: Swapnika
+   Date: 24-08-2018 '''
 def is_horizontal(main_list, turn):
     '''to check the game horizontally'''
     count = 0
