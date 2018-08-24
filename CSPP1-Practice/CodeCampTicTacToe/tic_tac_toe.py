@@ -27,7 +27,7 @@ def is_diagonal_forward(main_list, turn):
             count += 1
     if count == 0:
             return True
-    return False          
+    return False
 
 def is_diagonal_backward(main_list, turn):
     '''Checks for diagnol backward match'''
@@ -68,7 +68,7 @@ def main():
     elif x_count > o_count + 1 or o_count > x_count + 1:
         print("invalid game")
         count += 1
-    
+
     turn_x = 'x'
     boolean_x = (is_horizontal(main_list, turn_x)
                  or is_vertical(main_list, turn_x)
