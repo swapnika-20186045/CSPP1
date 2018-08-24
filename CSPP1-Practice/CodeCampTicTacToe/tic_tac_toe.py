@@ -55,7 +55,7 @@ def read_input():
     list_1 = []
 
     for _ in range(3):
-        list_1.append(list(map(str, input().split())))
+        list_1.append(input().split())
     return list_1
 
 def main():
