@@ -1,6 +1,6 @@
-'''tic-tac-toe'''
-
 '''
+tic-tac-toe
+
 Author: Swapnika
 Date: 24-08-2018
 '''
