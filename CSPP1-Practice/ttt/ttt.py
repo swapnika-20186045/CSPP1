@@ -32,7 +32,7 @@ def is_horizontal(board):
     count = 0
     tmp = ''
     for i in range(len(board)):
-        if board[i][0] == board[i][1] and board[i][1] == board[i][2]
+        if board[i][0] == board[i][1] and board[i][1] == board[i][2]:
             count += 1
             tmp = board[i][0]
     if (count > 1):
@@ -44,7 +44,7 @@ def is_vertical(board):
     count = 0
     tmp = ''
     for i in range(len(board)):
-        if board[0][1] == board[1][i] and board[1][i] == board[2][i]
+        if board[0][1] == board[1][i] and board[1][i] == board[2][i]:
             count += 1
             tmp = board[0][i]
     if (count > 1):
@@ -55,10 +55,10 @@ def is_vertical(board):
 def is_diagonal(board):
     count = 0
     tmp = ''
-    if board[0][0] == board[1][1] and board[1][1] == board[2][2]
+    if board[0][0] == board[1][1] and board[1][1] == board[2][2]:
             count += 1
             tmp = board[0][0]
-    if board[0][2] == board[1][1] and board[1][1] == board[2][0]
+    if board[0][2] == board[1][1] and board[1][1] == board[2][0]:
             count += 1
             tmp = board[0][2]
     if (count > 1):
