@@ -42,10 +42,10 @@ def is_diagonal_backward(main_list, turn):
     return False
 
 def read_input():
-    main_list = []
+    list_1 = []
     for _ in range(3):
-        main_list.append(list(map(str, input().split())))
-    return main_list
+        list_1.append(list(map(str, input().split())))
+    return list_1
 
 def main():
     '''main function'''
@@ -54,7 +54,7 @@ def main():
     o_count = 0
     char_count = 0
     other_char = 0
-    read_input()
+    main_list = read_input()
 
     for lo_op in range(3):
         for in_loop in range(3):
