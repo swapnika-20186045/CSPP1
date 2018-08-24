@@ -61,8 +61,8 @@ def main():
     turn_o = 'o'
     boolean_o = (is_horizontal(main_list, turn_o)
                  or is_vertical(main_list, turn_o)
-                 or is_diagnol_forward(main_list, turn_o)
-                 or is_diagnol_backward(main_list, turn_o))
+                 or is_diagonal_forward(main_list, turn_o)
+                 or is_diagonal_backward(main_list, turn_o))
 
     if boolean_x and boolean_o and count == 0:
         print("invalid game")
