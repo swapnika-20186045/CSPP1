@@ -51,7 +51,24 @@ def main():
     main_list = []
     for i in range(3):
         main_list.append(list(map(str, input().split())))
-
+    
+    for lo_op in range(3):
+        for in_loop in range(3):
+            if main_list[lo_op][in_loop] == 'x':
+                x_count += 1
+            elif main_list[lo_op][in_loop] == 'o':
+                o_count += 1
+            elif main_list[lo_op][in_loop] == '.':
+                char_count += 1
+            else:
+                other_char += 1
+    if other_char != 0:
+        print("invalid input")
+        count += 1
+    elif x_count > o_count + 1 or o_count > x_count + 1:
+        print("invalid game")
+        count += 1
+    
     turn_x = 'x'
     boolean_x = (is_horizontal(main_list, turn_x)
                  or is_vertical(main_list, turn_x)
