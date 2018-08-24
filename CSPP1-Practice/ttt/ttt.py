@@ -14,14 +14,14 @@ def is_valid(board):
 
 def check_game(board):
     for i in range(len(board)):
-        if board[i][0] == board[i][1] and board[i][1] == board[i][2]
+        if board[i][0] == board[i][1] and board[i][1] == board[i][2]:
             count += 1
     for i in range(len(board)):
-        if board[0][1] == board[1][i] and board[1][i] == board[2][i]
+        if board[0][1] == board[1][i] and board[1][i] == board[2][i]:
             count += 1
-    if board[0][0] == board[1][1] and board[1][1] == board[2][2]
+    if board[0][0] == board[1][1] and board[1][1] == board[2][2]:
         count += 1
-    if board[0][2] == board[1][1] and board[1][1] == board[2][0]
+    if board[0][2] == board[1][1] and board[1][1] == board[2][0]:
         count += 1
     if count > 1:
         print ("invalid game")
