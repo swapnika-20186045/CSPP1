@@ -53,6 +53,7 @@ def is_diagonal_backward(main_list, turn):
 def read_input():
     '''to read the input'''
     list_1 = []
+
     for _ in range(3):
         list_1.append(list(map(str, input().split())))
     return list_1
@@ -76,6 +77,7 @@ def main():
                 char_count += 1
             else:
                 other_char += 1
+
     if other_char != 0:
         print("invalid input")
         count += 1
