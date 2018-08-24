@@ -65,7 +65,7 @@ def build_search_index(docs):
     len_doc_list = len(doc_list)
     for i in range(len_doc_list):
         doc_list[i] = word_list(doc_list[i])
-        doc_list[i] = collections.counter(doc_list[i])
+        doc_list[i] = collections.Counter(doc_list[i])
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
