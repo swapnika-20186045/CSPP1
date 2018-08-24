@@ -60,7 +60,8 @@ def main():
                 o_count += 1
             elif main_list[lo_op][in_loop] == '.':
                 char_count += 1
-            other_char += 1
+            else:
+                other_char += 1
     if other_char != 0:
         print("invalid input")
         count += 1
