@@ -1,11 +1,12 @@
 def is_valid(board):
     x_sum = 0
     o_sum = 0
+    sum_val = 0
     for i in board:
         x_sum += i.count('x')
         o_sum += i. count('o')
-        sum += i.count('x') + i. count('o') + i.count('.')
-    if sum != 9:
+        sum_val += i.count('x') + i. count('o') + i.count('.')
+    if sum_val != 9:
         print("invalid input")
         return
     if (x_sum - o_sum not in (0, 1, -1)):
