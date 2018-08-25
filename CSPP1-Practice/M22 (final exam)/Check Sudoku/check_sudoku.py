@@ -37,9 +37,13 @@ def check_sudoku(sudoku, line):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    if "".join(sorted(sudoku[0][0]+sudoku[0][1]+sudoku[0][2]+sudoku[1][0]+sudoku[1][1]+sudoku[1][2]+sudoku[2][0]+sudoku[2][1]+sudoku[2][2])) != line:
+    if "".join(sorted(sudoku[0][0]+sudoku[0][1]+sudoku[0][2]+sudoku[1][0]
+                     +sudoku[1][1]+sudoku[1][2]+sudoku[2][0]+sudoku[2][1]
+                     +sudoku[2][2])) != line:
         return False
-    if "".join(sorted(sudoku[0][3]+sudoku[0][4]+sudoku[0][5]+sudoku[1][3]+sudoku[1][4]+sudoku[1][5]+sudoku[2][3]+sudoku[2][4]+sudoku[2][5])) != line:
+    if "".join(sorted(sudoku[0][3]+sudoku[0][4]+sudoku[0][5]+sudoku[1][3]
+                     +sudoku[1][4]+sudoku[1][5]+sudoku[2][3]+sudoku[2][4]
+                     +sudoku[2][5])) != line:
         return False
     if "".join(sorted(sudoku[0][6]+sudoku[0][7]+sudoku[0][8]+sudoku[1][6]+sudoku[1][7]+sudoku[1][8]+sudoku[2][6]+sudoku[2][7]+sudoku[2][8])) != line:
         return False
