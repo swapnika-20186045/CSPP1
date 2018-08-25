@@ -17,7 +17,10 @@ def is_box(sudoku):
                 return False
 
 def is_horizontal(sudoku, line):
-    for i in range(9):
+    for i in sudoku:
+        x = []
+        for j in range(9):
+            x.append(sudoku[i][j])
         if "".join(sorted(i)) != line:
             return False
 
