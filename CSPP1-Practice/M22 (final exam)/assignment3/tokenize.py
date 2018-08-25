@@ -8,7 +8,7 @@ Date: 25-08-2018
 
 import re
 def tokenize(string):
-    reg = re.compile('[^A-Za-z0-9]')
+    reg = re.compile('[^ A-Za-z0-9]')
     a_dict = {}
     list_1 = []
     for i in string:
