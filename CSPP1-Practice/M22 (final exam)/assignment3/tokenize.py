@@ -14,11 +14,11 @@ def tokenize(string):
     return str_1
 
 
-# def getFrequencyDict(str_1):
-#     freq = {}
-#     for x in str_1:
-#         freq[x] = freq.get(x, 0) + 1
-#     return freq
+def getFrequencyDict(sequence):
+    freq = {}
+    for x in sequence:
+        freq[x] = freq.get(x, 0) + 1
+    return freq
       
 def main():
     str_1 = ""
