@@ -19,7 +19,7 @@ def tokenize(string):
     return a_dict
     
 def main():
-    n = int(input)
+    n = int(input())
     list_strs = []
     for _ in range(n):
         list_strs.append(input())
