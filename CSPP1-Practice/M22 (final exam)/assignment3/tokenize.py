@@ -13,7 +13,7 @@ def word_list(text):
         return a list of words
     '''
     str_1 = ""
-    list_1 = []
+    
     str_1 = re.sub('[^ a-z]', '', text.lower())
     # str_1 = text.lower()
     list_1 = str_1.split()
@@ -61,7 +61,8 @@ def tokenize(list_1):
       
 def main():
     # wordlist = []
-    string = input()
+    list_1 = []
+    text = input()
     print(tokenize(list_1))
     # print(wordListToFreqDict(wordlist))
     # getFrequencyDict(str_1)
