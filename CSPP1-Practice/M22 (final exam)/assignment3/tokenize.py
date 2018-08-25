@@ -8,6 +8,7 @@ Date: 25-08-2018
 
 import re
 def tokenize(string):
+    '''tokenize and frequency of dictionary'''
     reg = re.compile('[^ A-Za-z0-9]')
     a_dict = {}
     list_1 = []
@@ -17,11 +18,12 @@ def tokenize(string):
         for k in j:
             a_dict[k] = a_dict.get(k, 0)+1
     return a_dict
-    
+
 def main():
-    n = int(input())
+    '''main function'''
+    num_n = int(input())
     list_strs = []
-    for _ in range(n):
+    for _ in range(num_n):
         list_strs.append(input())
     print(tokenize(list_strs))
 
