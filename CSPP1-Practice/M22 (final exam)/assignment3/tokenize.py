@@ -25,7 +25,7 @@ def main():
     str_1 = ""
     string = input()
     print(tokenize(string))
-    getFrequencyDict(str_1)
+    # getFrequencyDict(str_1)
 
 if __name__ == '__main__':
     main()
