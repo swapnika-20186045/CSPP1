@@ -15,9 +15,9 @@ def tokenize(string):
         str_1 = input().split()
     return str_1
 
-def getFrequencyDict():
+def getFrequencyDict(str_1):
     freq = {}
-    for x in :
+    for x in str_1:
         freq[x] = freq.get(x, 0) + 1
     return freq
       
