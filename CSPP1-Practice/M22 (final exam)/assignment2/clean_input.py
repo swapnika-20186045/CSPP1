@@ -11,7 +11,7 @@ def clean_string(string):
     str_1 = ""
 
     for _ in string:
-        str_1 = re.sub('[^ A-Za-z0-9]', '', string.lower())
+        str_1 = re.sub('[^A-Za-z0-9]', '', string.lower())
     # str_1 = string.lower()
     # str_1 = string.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
     return str_1
