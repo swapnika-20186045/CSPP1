@@ -11,8 +11,8 @@ def tokenize(string):
     
     
     for i in string:
-        str_1 = re.sub('[^ A-Za-z]', '', string.lower())
-        str_1 = input().split()
+        # str_1 = re.sub('[^ A-Za-z]', '', string.lower())
+        str_1 = input().split(" ")
     return str_1
 
 # def getFrequencyDict(str_1):
