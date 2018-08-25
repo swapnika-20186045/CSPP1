@@ -7,10 +7,10 @@ Date: 25-08-2018
 '''
 
 def tokenize(string):
-	string = input()
-	str_1 = ""
-	for i in string:
-		str_1 = input().split()
+    string = input()
+    str_1 = ""
+    for i in string:
+        str_1 = input().split()
     return str_1
             
 def main():
