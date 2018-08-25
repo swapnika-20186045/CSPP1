@@ -7,20 +7,25 @@ Date: 25-08-2018
 '''
 
 import re
-def clean_string(string):
-    '''to clean the input string'''
-    str_1 = ""
-
-    for _ in string:
-        str_1 = re.sub('[^a-z]', '', string.lower())
-    # str_1 = string.lower()
-    # str_1 = string.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
+def tokenize(string):
+    
+    
+    for i in string:
+        str_1 = re.sub('[^ A-Za-z]', '', string.lower())
+        str_1 = input().split()
     return str_1
 
+# def getFrequencyDict(str_1):
+#     freq = {}
+#     for x in str_1:
+#         freq[x] = freq.get(x, 0) + 1
+#     return freq
+      
 def main():
-    '''main function'''
+    str_1 = ""
     string = input()
-    print(clean_string(string))
+    print(tokenize(string))
+    # getFrequencyDict(str_1)
 
 if __name__ == '__main__':
     main()
