@@ -3,7 +3,8 @@ Write a python program to read multiple lines of text input and store the input 
 '''
 
 def read_input():
-	list_1 = []
+    list_1 = []
+    n = len(input)
 
     for _ in range(n):
         list_1.append(input())
