@@ -16,12 +16,14 @@ def is_grid(sudoku):
         for j in range(9):
             if not '9' >= sudoku[i][j] >= '0':
                 return False
+    return True
 
 def is_horizontal(sudoku, line):
     '''check horizontally'''
     for i in sudoku:
         if "".join(sorted(i)) != line:
             return False
+    return True
 
 def is_vertical(sudoku, line):
     '''check vertically'''
@@ -31,6 +33,7 @@ def is_vertical(sudoku, line):
             list_x.append(sudoku[i][j])
         if "".join(sorted(list_x)) != line:
             return False
+    return True
 
 def check_sudoku(sudoku, line):
     '''
@@ -90,7 +93,7 @@ def main():
         row = input().split()
         sudoku.append(row)
     # call solution function and print result to console
-    print(is_grid(sudoku) or is_horizontal(sudoku, line) or is_vertical(sudoku, line) or True)
+    print(is_grid(sudoku) and is_horizontal(sudoku, line) and is_vertical(sudoku, line))
     # or check_sudoku(sudoku, line))
 
 if __name__ == '__main__':
