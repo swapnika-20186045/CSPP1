@@ -12,7 +12,6 @@ def read_input():
 
     for i in range(num_n):
         str_1 += input() + '\n'
-        i += 1
     print(str_1)
     # return list_1
 
