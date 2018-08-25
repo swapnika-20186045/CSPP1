@@ -22,7 +22,7 @@ def word_list(text):
 def tokenize(string):
     a_dict = {}
     # initialize a search index (an empty dictionary)
-    doc_list = string
+    doc_list = list_1
     len_doc_list = len(doc_list)
     for i in range(len_doc_list):
         doc_list[i] = word_list(doc_list[i])
