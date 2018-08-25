@@ -16,12 +16,12 @@ def is_box(sudoku):
             if not '9' >= sudoku[i][j] >= '0':
                 return False
 
-def is_horizontal(sudoku):
+def is_horizontal(sudoku, line):
     for i in sudoku:
         if "".join(sorted(i)) !=  line:
             return False
 
-def is_vertical(sudoku):
+def is_vertical(sudoku, line):
     for i in range(9):
         x = []
         for j in range(9):
@@ -29,7 +29,7 @@ def is_vertical(sudoku):
         if "".join(sorted(x)) != line:
             return False
 
-def check_sudoku(sudoku):
+def check_sudoku(sudoku, line):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
@@ -71,9 +71,9 @@ def main():
         sudoku.append(row)
     # call solution function and print result to console
     is_box(sudoku)
-    is_horizontal(sudoku)
-    is_vertical(sudoku)
-    print(check_sudoku(sudoku))
+    is_horizontal(sudoku, line)
+    is_vertical(sudoku, line)
+    print(check_sudoku(sudoku, line))
 
 if __name__ == '__main__':
     main()
