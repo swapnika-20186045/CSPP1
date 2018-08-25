@@ -6,6 +6,19 @@ Author: Swapnika
 Date: 25-08-2018
 '''
 # import re
+def word_list(text):
+    '''
+        Change case to lower and split the words using a SPACE
+        Clean up the text by remvoing all the non alphabet characters
+        return a list of words
+    '''
+    str_1 = ""
+    list_1 = []
+    str_1 = re.sub('[^ a-z]', '', text.lower())
+    # str_1 = text.lower()
+    list_1 = str_1.split()
+    return list_1
+
 def tokenize(string):
     a_dict = {}
     # initialize a search index (an empty dictionary)
