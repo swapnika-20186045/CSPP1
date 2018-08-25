@@ -12,6 +12,6 @@ def read_input():
 
 def main():
     l_1 = read_input()
-
+    return l_1
 if __name__ == '__main__':
     main()
