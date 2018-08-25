@@ -5,7 +5,7 @@ each word
 Author: Swapnika
 Date: 25-08-2018
 '''
-# import re
+import re
 def word_list(text):
     '''
         Change case to lower and split the words using a SPACE
