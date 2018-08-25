@@ -1,5 +1,7 @@
 '''
 Write a python program to read multiple lines of text input and store the input into a string.
+Author: Swapnika
+Date: 25-08-2018
 '''
 
 def read_input():
