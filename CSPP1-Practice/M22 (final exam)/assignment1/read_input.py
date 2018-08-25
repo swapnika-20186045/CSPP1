@@ -6,7 +6,7 @@ def read_input():
     list_1 = []
     # n = len(input())
 
-    for _ in range(len(input)):
+    for _ in range(3):
         list_1.append(input())
     return list_1
 
