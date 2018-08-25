@@ -29,6 +29,7 @@ def wordListToFreqDict(wordlist):
 def main():
     string = input()
     print(tokenize(string))
+    print(wordListToFreqDict(wordlist))
     # getFrequencyDict(str_1)
 
 if __name__ == '__main__':
