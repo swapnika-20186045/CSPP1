@@ -38,8 +38,8 @@ def check_sudoku(sudoku, line):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     if "".join(sorted(sudoku[0][0]+sudoku[0][1]+sudoku[0][2]+sudoku[1][0]
-                     +sudoku[1][1]+sudoku[1][2]+sudoku[2][0]+sudoku[2][1]
-                     +sudoku[2][2])) != line:
+               +sudoku[1][1]+sudoku[1][2]+sudoku[2][0]+sudoku[2][1]
+               +sudoku[2][2])) != line:
         return False
     if "".join(sorted(sudoku[0][3]+sudoku[0][4]+sudoku[0][5]+sudoku[1][3]
                      +sudoku[1][4]+sudoku[1][5]+sudoku[2][3]+sudoku[2][4]
