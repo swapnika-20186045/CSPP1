@@ -9,11 +9,12 @@ def read_input():
     for i in range(n):
         list_1.append(input())
         i += 1
-    return list_1
+    print(list_1)
+    # return list_1
 
 def main():
     read_input()
     # return l_1
-    print(list_1)
+
 if __name__ == '__main__':
     main()
