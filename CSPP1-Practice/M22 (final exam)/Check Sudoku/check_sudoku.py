@@ -25,7 +25,7 @@ def is_vertical(sudoku, line):
     for i in range(9):
         x = []
         for j in range(9):
-            x.append(sudoku[j][i])
+            x.append(sudoku[i][j])
         if "".join(sorted(x)) != line:
             return False
 
