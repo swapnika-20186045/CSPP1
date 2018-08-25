@@ -27,6 +27,7 @@ def wordListToFreqDict(wordlist):
 #     return freq
       
 def main():
+    wordlist = []
     string = input()
     print(tokenize(string))
     print(wordListToFreqDict(wordlist))
