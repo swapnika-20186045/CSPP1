@@ -7,8 +7,8 @@ Date: 25-08-2018
 '''
 
 def clean_string(string):
-	str_1 = ""
-	str_1 = re.sub('[^ A-Za-z0-9]', '', text.lower())
+    str_1 = ""
+    str_1 = re.sub('[^ A-Za-z0-9]', '', text.lower())
     return str_1
 
 def main():
