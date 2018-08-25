@@ -19,7 +19,7 @@ def word_list(text):
     list_1 = str_1.split()
     return list_1
 
-def tokenize(string):
+def tokenize(list_1):
     a_dict = {}
     # initialize a search index (an empty dictionary)
     doc_list = list_1
@@ -62,7 +62,7 @@ def tokenize(string):
 def main():
     # wordlist = []
     string = input()
-    print(tokenize(string))
+    print(tokenize(list_1))
     # print(wordListToFreqDict(wordlist))
     # getFrequencyDict(str_1)
 
