@@ -11,7 +11,7 @@ def read_input():
     return list_1
 
 def main():
-    read_input()
+    l_1 = read_input()
 
 if __name__ == '__main__':
     main()
