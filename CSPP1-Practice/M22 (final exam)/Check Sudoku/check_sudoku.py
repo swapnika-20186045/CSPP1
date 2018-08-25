@@ -10,18 +10,21 @@
 Author: Swapnika
 Date: 25-08-2018
 '''
-def is_box(sudoku):
+def is_grid(sudoku):
+    '''check in grid'''
     for i in range(9):
         for j in range(9):
             if not '9' >= sudoku[i][j] >= '0':
                 return False
 
 def is_horizontal(sudoku, line):
+    '''check horizontally'''
     for i in sudoku:
         if "".join(sorted(i)) != line:
             return False
 
 def is_vertical(sudoku, line):
+    '''check vertically'''
     for i in range(9):
         x = []
         for j in range(9):
@@ -70,7 +73,7 @@ def main():
         row = input().split( )
         sudoku.append(row)
     # call solution function and print result to console
-    is_box(sudoku)
+    is_grid(sudoku)
     is_horizontal(sudoku, line)
     is_vertical(sudoku, line)
     print(check_sudoku(sudoku, line))
