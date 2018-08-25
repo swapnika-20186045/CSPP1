@@ -5,37 +5,27 @@ each word
 Author: Swapnika
 Date: 25-08-2018
 '''
-# def getFrequencyDict(l_l):
-#     """
-#     Returns a dictionary where the keys are elements of the sequence
-#     and the values are integer counts, for the number of times that
-#     an element is repeated in the sequence.
+import re
+def tokenize(string):
+    
+    
+    for i in string:
+        # str_1 = re.sub('[^ A-Za-z]', '', string.lower())
+        str_1 = string.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
+        # str_1 = input().split()
+    return str_1
 
-#     sequence: string or list
-#     return: dictionary
-#     """
-#     # freqs: dictionary (element_type -> int)
+# def getFrequencyDict(str_1):
 #     freq = {}
-#     for x in l_l:
+#     for x in str_1:
 #         freq[x] = freq.get(x, 0) + 1
 #     return freq
-
-def clean_input(da_ta):
-    l_l = ""
-    for i in range(int(da_ta)):
-        
-        l_l = da_ta.split()
-        i += 1
-    return l_l
-
+      
 def main():
-    '''main function'''
-    da_ta = input()
-    # num_n = input()
-    # a_dict = {}
-    # for i in range(int(num_n)):
-    #     da_ta = input()
-    #     l_l = da_ta.split()
-    #     i += 1
-    # data_1 = input()
-    print(clean_input(da_ta))
+    str_1 = ""
+    string = input()
+    print(tokenize(string))
+    # getFrequencyDict(str_1)
+
+if __name__ == '__main__':
+    main()
