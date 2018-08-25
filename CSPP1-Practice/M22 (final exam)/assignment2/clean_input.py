@@ -9,9 +9,8 @@ Date: 25-08-2018
 import re
 def clean_string(string):
     str_1 = ""
-    num_n = int(input())
 
-    for _ in range(num_n):
+    for _ in string:
         str_1 = re.sub('[^ A-Za-z0-9]', '', input().lower())
     return str_1
 
