@@ -10,8 +10,10 @@ import re
 def clean_string(string):
     str_1 = ""
 
-    for _ in string:
-        str_1 = re.sub('[^ A-Za-z0-9]', '', input().lower())
+    # for _ in string:
+    #     str_1 = re.sub('[^ A-Za-z0-9]', '', input().lower())
+    str_1 = string.lower()
+    str_1 = string.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
     return str_1
 
 def main():
