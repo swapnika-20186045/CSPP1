@@ -85,9 +85,9 @@ def main():
     sudoku = []
     line = "123456789"
     # loop to read 9 lines of input from console
-    for i in range(9):
+    for _ in range(9):
         # read a line, split it on SPACE and append row to list
-        row = input().split( )
+        row = input().split()
         sudoku.append(row)
     # call solution function and print result to console
     is_grid(sudoku)
