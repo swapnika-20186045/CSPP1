@@ -21,6 +21,7 @@ Date: 25-08-2018
 #     return freq
 
 def clean_input(da_ta):
+    l_l = ""
     for i in range(int(da_ta)):
         
         l_l = da_ta.split()
