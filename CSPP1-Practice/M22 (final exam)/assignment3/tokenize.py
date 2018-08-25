@@ -28,5 +28,5 @@ def main():
         da_ta = input()
         l_l = da_ta.split()
         i += 1
-    data_1 = input()
+    # data_1 = input()
     print(l_l)
