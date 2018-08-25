@@ -10,7 +10,7 @@ def read_input():
     str_1 = ""
     num_n = int(input())
 
-    for i in range(num_n):
+    for _ in range(num_n):
         str_1 += input() + '\n'
     print(str_1)
     # return list_1
