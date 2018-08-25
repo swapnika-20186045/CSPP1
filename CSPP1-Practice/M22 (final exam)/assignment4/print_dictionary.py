@@ -8,9 +8,9 @@ Date: 25-08-2018
 '''
 
 def print_dictionary(dictionary):
-    keys = sorted(index.keys())
+    keys = sorted(dictionary.keys())
     for key in keys:
-        print(key, " - ", index[key])
+        print(key, " - ", dictionary[key])
 
 def main():
     dictionary = eval(input())
