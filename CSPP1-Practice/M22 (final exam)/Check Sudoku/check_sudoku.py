@@ -26,10 +26,10 @@ def is_horizontal(sudoku, line):
 def is_vertical(sudoku, line):
     '''check vertically'''
     for i in range(9):
-        x = []
+        list_x = []
         for j in range(9):
-            x.append(sudoku[i][j])
-        if "".join(sorted(x)) != line:
+            list_x.append(sudoku[i][j])
+        if "".join(sorted(list_x)) != line:
             return False
 
 def check_sudoku(sudoku, line):
