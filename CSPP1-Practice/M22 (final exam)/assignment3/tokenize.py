@@ -21,15 +21,16 @@ Date: 25-08-2018
 #     return freq
 
 def clean_input(da_ta):
-    for i in range(int(num_n)):
-        da_ta = input()
+    for i in range(int(da_ta)):
+        
         l_l = da_ta.split()
         i += 1
     return l_l
 
 def main():
     '''main function'''
-    num_n = input()
+    da_ta = input()
+    # num_n = input()
     # a_dict = {}
     # for i in range(int(num_n)):
     #     da_ta = input()
