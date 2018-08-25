@@ -12,8 +12,8 @@ def frequency_graph(dictionary):
 
 
 def main():
-	str_1 = ''
-	str_2 = ''
+    str_1 = ''
+    str_2 = ''
     dictionary = eval(input())
     frequency_graph(dictionary)
 
