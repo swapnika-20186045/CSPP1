@@ -12,7 +12,7 @@ def tokenize(string):
     a_dict = {}
     list_1 = []
     for i in string:
-        list_1.append(re.sub('', i).split())
+        list_1.append(reg.sub('', i).split())
     for j in list_1:
         for k in j:
             a_dict[k] = a_dict.get(k, 0)+1
