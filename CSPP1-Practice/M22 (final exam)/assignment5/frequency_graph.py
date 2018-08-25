@@ -7,7 +7,7 @@ def frequency_graph(dictionary):
     keys = sorted(dictionary.keys())
     for key in keys:
         str_1 = (key, "-", dictionary[key])
-        str_2 = re.sub('[^A-Za-z]', '#', str_1.lower())
+        str_2 = re.sub('[^A-Za-z]', '#')
     print(str_2)
 
 
