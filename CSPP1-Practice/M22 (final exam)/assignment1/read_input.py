@@ -6,8 +6,8 @@ def read_input():
     list_1 = []
     n = int(input())
 
-    for _ in range(3):
-        list_1.append(input())
+    for _ in range(n):
+        list_1.append(input() + '\n')
     return list_1
 
 def main():
