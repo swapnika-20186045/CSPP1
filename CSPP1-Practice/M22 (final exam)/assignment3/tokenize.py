@@ -15,6 +15,9 @@ def tokenize(string):
     # for i in string:
     #     str_1 = input().split()
     # return str_1
+def wordListToFreqDict(wordlist):
+    wordfreq = [wordlist.count(p) for p in wordlist]
+    return dict(zip(wordlist,wordfreq))
 
 
 # def getFrequencyDict(sequence):
