@@ -9,9 +9,14 @@ import re
 def tokenize(string):
     
     
-    for i in string:
-        str_1 = input().split()
-    return str_1
+    # for i in string:
+    #     str_1 = input().split()
+    # return str_1
+    wordList = []
+    for line in string:
+        wordList.append(line.strip().lower())
+    return wordList
+
 
 # def getFrequencyDict(str_1):
 #     freq = {}
