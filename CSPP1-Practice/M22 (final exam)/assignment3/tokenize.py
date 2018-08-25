@@ -6,22 +6,24 @@ Author: Swapnika
 Date: 25-08-2018
 '''
 
+import re
 def tokenize(string):
-    words = string.split()
+    reg = re.complie('[^A-Za-z0-9]')
     a_dict = {}
-    for i in words:
-        if i in a_dict:
-            a_dict[i] += 1
-        else:
-            a_dict[i] = 1
+    list_1 = []
+    for i in string:
+        list_1.append(re.sub('', i).split())
+    for j in list_1:
+        for k in j:
+            a_dict[k] = a_dict.get(k, 0)+1
     return a_dict
     
 def main():
     n = int(input)
-    text = ''
+    list_strs = []
     for _ in range(n):
-        text = input()+"\n"
-    print(tokenize(text))
+        list_strs.append(input())
+    print(tokenize(list_strs))
 
 if __name__ == '__main__':
     main()
