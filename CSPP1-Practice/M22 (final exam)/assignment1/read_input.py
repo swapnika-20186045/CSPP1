@@ -4,14 +4,14 @@ Write a python program to read multiple lines of text input and store the input 
 
 def read_input():
     list_1 = []
-    # n = len(input())
+    n = int(input())
 
     for _ in range(3):
-        list_1.append(input() + '\n')
+        list_1.append(input())
     return list_1
 
 def main():
-    l_1 = read_input()
-    return l_1
+    # l_1 = read_input()
+    # return l_1
 if __name__ == '__main__':
     main()
